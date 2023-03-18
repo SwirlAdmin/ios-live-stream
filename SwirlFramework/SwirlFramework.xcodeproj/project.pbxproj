@@ -7,15 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C807DC8728AFA3E900484E85 /* photo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C807DC8628AFA3E800484E85 /* photo.jpeg */; };
-		C830FF2328C73CEB009ACE11 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = C830FF1F28C73CE7009ACE11 /* heart2.png */; };
-		C830FF2428C73CEB009ACE11 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = C830FF2028C73CE8009ACE11 /* heart1.png */; };
-		C830FF2528C73CEB009ACE11 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = C830FF2128C73CE9009ACE11 /* smiley.png */; };
-		C830FF2628C73CEB009ACE11 /* heart3.png in Resources */ = {isa = PBXBuildFile; fileRef = C830FF2228C73CEA009ACE11 /* heart3.png */; };
 		C83625E428B4CE9C00272F9F /* LiveStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83625E328B4CE9C00272F9F /* LiveStream.swift */; };
 		C836362028C9BA8D00F29A55 /* StreamProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836361F28C9BA8D00F29A55 /* StreamProduct.swift */; };
 		C836362228C9C70100F29A55 /* AttachProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836362128C9C70100F29A55 /* AttachProductTableViewCell.swift */; };
-		C83A95CE28AE4CA800516AB0 /* thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C83A95CD28AE4CA800516AB0 /* thumbnail.jpg */; };
 		C89F619D28A0E97A00112341 /* SwirlFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C89F619C28A0E97A00112341 /* SwirlFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89F61A628A0F4D200112341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89F61A528A0F4D200112341 /* Main.storyboard */; };
 		C89F61AD28A1075A00112341 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F61A828A1075A00112341 /* DemoViewController.swift */; };
@@ -39,7 +33,6 @@
 		C8AFF85F28A11DC3004EB2E5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF85828A11DC3004EB2E5 /* UIDevice.swift */; };
 		C8AFF86028A11DC3004EB2E5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF85928A11DC3004EB2E5 /* UIColor.swift */; };
 		C8AFF86128A11DC3004EB2E5 /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF85A28A11DC3004EB2E5 /* StringFile.swift */; };
-		C8AFF86328A1311E004EB2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AFF86228A1311E004EB2E5 /* Assets.xcassets */; };
 		C8AFF86A28A135DF004EB2E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF86528A135DF004EB2E5 /* Constants.swift */; };
 		C8AFF86B28A135DF004EB2E5 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF86628A135DF004EB2E5 /* Connection.swift */; };
 		C8AFF86C28A135DF004EB2E5 /* VideoProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFF86728A135DF004EB2E5 /* VideoProcessing.swift */; };
@@ -59,15 +52,9 @@
 
 /* Begin PBXFileReference section */
 		11285DAADAE83DFB54E51325 /* Pods-SwirlFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwirlFramework.debug.xcconfig"; path = "Target Support Files/Pods-SwirlFramework/Pods-SwirlFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		C807DC8628AFA3E800484E85 /* photo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpeg; sourceTree = "<group>"; };
-		C830FF1F28C73CE7009ACE11 /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
-		C830FF2028C73CE8009ACE11 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
-		C830FF2128C73CE9009ACE11 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
-		C830FF2228C73CEA009ACE11 /* heart3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart3.png; sourceTree = "<group>"; };
 		C83625E328B4CE9C00272F9F /* LiveStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStream.swift; sourceTree = "<group>"; };
 		C836361F28C9BA8D00F29A55 /* StreamProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamProduct.swift; sourceTree = "<group>"; };
 		C836362128C9C70100F29A55 /* AttachProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachProductTableViewCell.swift; sourceTree = "<group>"; };
-		C83A95CD28AE4CA800516AB0 /* thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumbnail.jpg; sourceTree = "<group>"; };
 		C89F619928A0E97A00112341 /* SwirlFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwirlFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89F619C28A0E97A00112341 /* SwirlFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwirlFramework.h; sourceTree = "<group>"; };
 		C89F61A328A0F40B00112341 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +80,6 @@
 		C8AFF85828A11DC3004EB2E5 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		C8AFF85928A11DC3004EB2E5 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C8AFF85A28A11DC3004EB2E5 /* StringFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
-		C8AFF86228A1311E004EB2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8AFF86528A135DF004EB2E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8AFF86628A135DF004EB2E5 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		C8AFF86728A135DF004EB2E5 /* VideoProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessing.swift; sourceTree = "<group>"; };
@@ -139,19 +125,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C802075B28B3A04700CD5EA1 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				C830FF2028C73CE8009ACE11 /* heart1.png */,
-				C830FF1F28C73CE7009ACE11 /* heart2.png */,
-				C830FF2228C73CEA009ACE11 /* heart3.png */,
-				C830FF2128C73CE9009ACE11 /* smiley.png */,
-				C807DC8628AFA3E800484E85 /* photo.jpeg */,
-				C83A95CD28AE4CA800516AB0 /* thumbnail.jpg */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		C83A95C828AE1B0D00516AB0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,11 +168,9 @@
 				C8CC65DB28A2324E00DBFFA9 /* IndicatorView */,
 				C8AFF86428A135AF004EB2E5 /* Tools */,
 				C8CE230A28C5D54A00D29925 /* FloatingHeart */,
-				C802075B28B3A04700CD5EA1 /* Image */,
 				C89F619C28A0E97A00112341 /* SwirlFramework.h */,
 				C89F61A328A0F40B00112341 /* Info.plist */,
 				C89F61A528A0F4D200112341 /* Main.storyboard */,
-				C8AFF86228A1311E004EB2E5 /* Assets.xcassets */,
 			);
 			path = SwirlFramework;
 			sourceTree = "<group>";
@@ -365,14 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C807DC8728AFA3E900484E85 /* photo.jpeg in Resources */,
-				C83A95CE28AE4CA800516AB0 /* thumbnail.jpg in Resources */,
 				C8B2213C29BB33F9007CB14A /* GoogleService-Info.plist in Resources */,
-				C830FF2428C73CEB009ACE11 /* heart1.png in Resources */,
-				C8AFF86328A1311E004EB2E5 /* Assets.xcassets in Resources */,
-				C830FF2628C73CEB009ACE11 /* heart3.png in Resources */,
-				C830FF2528C73CEB009ACE11 /* smiley.png in Resources */,
-				C830FF2328C73CEB009ACE11 /* heart2.png in Resources */,
 				C89F61A628A0F4D200112341 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

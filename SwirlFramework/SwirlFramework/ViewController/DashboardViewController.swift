@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 import IQKeyboardManagerSwift
 import ObjectMapper
 import SwiftyJSON

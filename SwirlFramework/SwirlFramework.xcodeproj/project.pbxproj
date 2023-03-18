@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A752D99B5C80D3EF897AC7 /* Pods_SwirlFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F48F824BB2DC21E43FE026 /* Pods_SwirlFramework.framework */; };
 		C89F619D28A0E97A00112341 /* SwirlFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C89F619C28A0E97A00112341 /* SwirlFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89F61A628A0F4D200112341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89F61A528A0F4D200112341 /* Main.storyboard */; };
 		C89F61B028A1075A00112341 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F61AB28A1075A00112341 /* DashboardViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		11285DAADAE83DFB54E51325 /* Pods-SwirlFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwirlFramework.debug.xcconfig"; path = "Target Support Files/Pods-SwirlFramework/Pods-SwirlFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		B3F48F824BB2DC21E43FE026 /* Pods_SwirlFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwirlFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89F619928A0E97A00112341 /* SwirlFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwirlFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89F619C28A0E97A00112341 /* SwirlFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwirlFramework.h; sourceTree = "<group>"; };
 		C89F61A328A0F40B00112341 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A752D99B5C80D3EF897AC7 /* Pods_SwirlFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 		00956C335C518D03E6815EF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3F48F824BB2DC21E43FE026 /* Pods_SwirlFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +173,6 @@
 				C89F619528A0E97A00112341 /* Sources */,
 				C89F619628A0E97A00112341 /* Frameworks */,
 				C89F619728A0E97A00112341 /* Resources */,
-				0D4748B9AD5686FD1E7B9941 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,23 +229,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D4748B9AD5686FD1E7B9941 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwirlFramework/Pods-SwirlFramework-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwirlFramework/Pods-SwirlFramework-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwirlFramework/Pods-SwirlFramework-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		670D989BFB4469319A30253F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

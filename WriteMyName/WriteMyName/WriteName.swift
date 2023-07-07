@@ -12,4 +12,8 @@ public struct WriteName {
     public static func sayHello() {
         print("From PMGajjar sayHello")
     }
+    
+    public static func sayHi() {
+        print("From Pinkesh Gajjar sayHi")
+    }
 }

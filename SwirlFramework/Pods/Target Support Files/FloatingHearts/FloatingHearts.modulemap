@@ -1,0 +1,6 @@
+framework module FloatingHearts {
+  umbrella header "FloatingHearts-umbrella.h"
+
+  export *
+  module * { export * }
+}

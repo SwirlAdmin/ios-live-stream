@@ -106,7 +106,7 @@
 		0436E584F3304BDA2ADA9E3854A3F17D /* semantic_version.upb.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3FF6185E8A4BA8F675890206BD10D2 /* semantic_version.upb.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		044EBB4049E4B33ADBEBCA5D3DE5D0FD /* subchannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBF3335ACA07A398D5B62CFB3A03D78 /* subchannel.h */; };
 		046E0B28140AA2E26E1414C62E8F045E /* security_handshaker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5A19F0DAC0A6F8DDE757412DE4A55670 /* security_handshaker.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
-		046F549CB7E467A9CE40A2759CD986AD /* gRPC-C++-gRPCCertificates-Cpp in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */; };
+		046F549CB7E467A9CE40A2759CD986AD /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */; };
 		04729F9C9A1617345F5283ED6A323BAB /* listener.upb.h in Copy src/core/ext/upb-generated/envoy/api/v2/listener Private Headers */ = {isa = PBXBuildFile; fileRef = 50C3934475A80BBF01EF81CCD39D525D /* listener.upb.h */; };
 		0480BA39906A58510100523B5BA36603 /* security_connector.h in Copy src/core/lib/security/security_connector Private Headers */ = {isa = PBXBuildFile; fileRef = 46962454F52A73F2C10D2B044B30636E /* security_connector.h */; };
 		0494C7CF96CEB41D5A0A69F87926E204 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D103951B93BCA15F46E0110591366C /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -11028,7 +11028,7 @@
 		9C37CD95B767B795A11B63B4C57DAFCE /* skiplist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = skiplist.h; path = db/skiplist.h; sourceTree = "<group>"; };
 		9C6368A2D5113A643A489491F0B4D5B8 /* message_compress_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = message_compress_filter.cc; path = src/core/ext/filters/http/message_compress/message_compress_filter.cc; sourceTree = "<group>"; };
 		9C702870AC201F26DBD7927B93204D3C /* FIRIAMMessageClientCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRIAMMessageClientCache.h; path = FirebaseInAppMessaging/Sources/Private/Flows/FIRIAMMessageClientCache.h; sourceTree = "<group>"; };
-		9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "gRPC-C++-gRPCCertificates-Cpp"; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86E19523425FBABE47A45A1583ED35 /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/Private/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
 		9C8DC5082665D240FF1FC530EB8315C1 /* load_system_roots_fallback.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = load_system_roots_fallback.cc; path = src/core/lib/security/security_connector/load_system_roots_fallback.cc; sourceTree = "<group>"; };
 		9C93C34D4DE6E39B97893CFDA2F62258 /* load_report.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = load_report.upb.h; path = "src/core/ext/upb-generated/envoy/api/v2/endpoint/load_report.upb.h"; sourceTree = "<group>"; };
@@ -11387,7 +11387,7 @@
 		B3C12567F316C9F9205A9871A3C43333 /* slice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice.h; path = include/leveldb/slice.h; sourceTree = "<group>"; };
 		B3C42B8DBC4B1FB4792ED28C825C71D2 /* child_policy_handler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = child_policy_handler.h; path = src/core/ext/filters/client_channel/lb_policy/child_policy_handler.h; sourceTree = "<group>"; };
 		B408D3658D003EA483F4B5C293A769AD /* FloatingHearts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingHearts-dummy.m"; sourceTree = "<group>"; };
-		B417416C7A485EDC28E38A89AF647AC7 /* FirebaseInAppMessaging-InAppMessagingDisplayResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "FirebaseInAppMessaging-InAppMessagingDisplayResources"; path = InAppMessagingDisplayResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B417416C7A485EDC28E38A89AF647AC7 /* InAppMessagingDisplayResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppMessagingDisplayResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41FA3E3BA4D557675AC4F952C1AA460 /* document_key.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = document_key.cc; path = Firestore/core/src/model/document_key.cc; sourceTree = "<group>"; };
 		B42681BC011B98A20DDF7E55B8010B01 /* context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = context.h; path = src/core/lib/channel/context.h; sourceTree = "<group>"; };
 		B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -13342,7 +13342,7 @@
 				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics.framework */,
 				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore.framework */,
 				D62C4F37ECE9B53ACB7DD80C7F0CEA50 /* FirebaseInAppMessaging.framework */,
-				B417416C7A485EDC28E38A89AF647AC7 /* FirebaseInAppMessaging-InAppMessagingDisplayResources */,
+				B417416C7A485EDC28E38A89AF647AC7 /* InAppMessagingDisplayResources.bundle */,
 				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations.framework */,
 				2DA0D814DFCB860D31D7BCD63D795858 /* FirebaseInstanceID.framework */,
 				5B654B4B042BA7DC93766943A643E42B /* FirebaseMessaging.framework */,
@@ -13350,7 +13350,7 @@
 				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
 				1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */,
-				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */,
+				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
 				B471867C535B02FA55D87E260F6480F8 /* grpc.framework */,
 				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
 				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
@@ -19538,7 +19538,7 @@
 			);
 			name = "gRPC-C++-gRPCCertificates-Cpp";
 			productName = "gRPCCertificates-Cpp";
-			productReference = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */;
+			productReference = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */ = {
@@ -19926,7 +19926,7 @@
 			);
 			name = "FirebaseInAppMessaging-InAppMessagingDisplayResources";
 			productName = InAppMessagingDisplayResources;
-			productReference = B417416C7A485EDC28E38A89AF647AC7 /* FirebaseInAppMessaging-InAppMessagingDisplayResources */;
+			productReference = B417416C7A485EDC28E38A89AF647AC7 /* InAppMessagingDisplayResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */ = {
@@ -20361,7 +20361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046F549CB7E467A9CE40A2759CD986AD /* gRPC-C++-gRPCCertificates-Cpp in Resources */,
+				046F549CB7E467A9CE40A2759CD986AD /* gRPCCertificates-Cpp.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -22579,7 +22579,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -22740,7 +22740,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseInAppMessaging";
 				IBSC_MODULE = FirebaseInAppMessaging;
 				INFOPLIST_FILE = "Target Support Files/FirebaseInAppMessaging/ResourceBundle-InAppMessagingDisplayResources-FirebaseInAppMessaging-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = InAppMessagingDisplayResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -22898,7 +22898,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -22951,7 +22951,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = "gRPCCertificates-Cpp";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -23539,7 +23539,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseInAppMessaging";
 				IBSC_MODULE = FirebaseInAppMessaging;
 				INFOPLIST_FILE = "Target Support Files/FirebaseInAppMessaging/ResourceBundle-InAppMessagingDisplayResources-FirebaseInAppMessaging-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = InAppMessagingDisplayResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -24574,7 +24574,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = "gRPCCertificates-Cpp";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

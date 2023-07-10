@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SwirlFramework"
-  spec.version      = "1.0.9"
+  spec.version      = "1.1.1"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the SwirlFramework framework."
   

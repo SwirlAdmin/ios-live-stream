@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		C8560C672A57EEF30094BD28 /* WriteMyNameToo.h in Headers */ = {isa = PBXBuildFile; fileRef = C8560C662A57EEF30094BD28 /* WriteMyNameToo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8560C6E2A57F0210094BD28 /* WriteNameToo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8560C6D2A57F0210094BD28 /* WriteNameToo.swift */; };
+		D6D13C4BE5126CBCC9105E7C /* Pods_WriteMyNameToo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C88560BF608F15F4B3D5F /* Pods_WriteMyNameToo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C8581F07FE2225880D5000C /* Pods-WriteMyNameToo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyNameToo.debug.xcconfig"; path = "Target Support Files/Pods-WriteMyNameToo/Pods-WriteMyNameToo.debug.xcconfig"; sourceTree = "<group>"; };
+		9657180F422A960AE08FDA6F /* Pods-WriteMyNameToo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyNameToo.release.xcconfig"; path = "Target Support Files/Pods-WriteMyNameToo/Pods-WriteMyNameToo.release.xcconfig"; sourceTree = "<group>"; };
+		A01C88560BF608F15F4B3D5F /* Pods_WriteMyNameToo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WriteMyNameToo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8560C632A57EEF30094BD28 /* WriteMyNameToo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyNameToo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8560C662A57EEF30094BD28 /* WriteMyNameToo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyNameToo.h; sourceTree = "<group>"; };
 		C8560C6D2A57F0210094BD28 /* WriteNameToo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNameToo.swift; sourceTree = "<group>"; };
@@ -22,17 +26,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D13C4BE5126CBCC9105E7C /* Pods_WriteMyNameToo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C810263458AC2FAC16B51F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C8581F07FE2225880D5000C /* Pods-WriteMyNameToo.debug.xcconfig */,
+				9657180F422A960AE08FDA6F /* Pods-WriteMyNameToo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		537E6CB476709461FCFE19E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A01C88560BF608F15F4B3D5F /* Pods_WriteMyNameToo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C8560C592A57EEF30094BD28 = {
 			isa = PBXGroup;
 			children = (
 				C8560C652A57EEF30094BD28 /* WriteMyNameToo */,
 				C8560C642A57EEF30094BD28 /* Products */,
+				13C810263458AC2FAC16B51F /* Pods */,
+				537E6CB476709461FCFE19E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8560C6A2A57EEF30094BD28 /* Build configuration list for PBXNativeTarget "WriteMyNameToo" */;
 			buildPhases = (
+				9EDF215505C523204CC6529A /* [CP] Check Pods Manifest.lock */,
 				C8560C5E2A57EEF30094BD28 /* Headers */,
 				C8560C5F2A57EEF30094BD28 /* Sources */,
 				C8560C602A57EEF30094BD28 /* Frameworks */,
@@ -127,6 +153,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9EDF215505C523204CC6529A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WriteMyNameToo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8560C5F2A57EEF30094BD28 /* Sources */ = {
@@ -262,6 +313,7 @@
 		};
 		C8560C6B2A57EEF30094BD28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C8581F07FE2225880D5000C /* Pods-WriteMyNameToo.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +348,7 @@
 		};
 		C8560C6C2A57EEF30094BD28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9657180F422A960AE08FDA6F /* Pods-WriteMyNameToo.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

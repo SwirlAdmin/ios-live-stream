@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WriteMyName"
-  spec.version      = "1.1.4"
+  spec.version      = "1.1.5"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the WriteMyName framework."
   
@@ -12,5 +12,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/SwirlAdmin/ios-live-stream.git", :tag => spec.version.to_s }
   spec.source_files  = "WriteMyName/**/*.{swift}"
   spec.swift_version = "5.0"
-  spec.dependency 'Firebase/Firestore'
+  spec.static_framework = true
+  spec.dependency 'Firebase', '10.11.0'
 end

@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
+import FirebaseFirestore
 
 public struct WriteName {
     

@@ -10,12 +10,10 @@
 		C847D6292A541B580004467A /* WriteMyName.h in Headers */ = {isa = PBXBuildFile; fileRef = C847D6282A541B580004467A /* WriteMyName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C847D6302A541B8C0004467A /* WriteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847D62F2A541B8C0004467A /* WriteName.swift */; };
 		C89400B82A5BDE1900DBE3CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C89400B72A5BDE1900DBE3CF /* GoogleService-Info.plist */; };
-		CE310A284F5ED3040AF61F6B /* Pods_WriteMyName.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0EA5C856EFA54AE54ABCBD /* Pods_WriteMyName.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24488136B03CF45581F123F6 /* Pods-WriteMyName.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.debug.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.debug.xcconfig"; sourceTree = "<group>"; };
-		3E0EA5C856EFA54AE54ABCBD /* Pods_WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984D5E9E64BF8B86B1D07B4 /* Pods-WriteMyName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.release.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.release.xcconfig"; sourceTree = "<group>"; };
 		C847D6252A541B580004467A /* WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847D6282A541B580004467A /* WriteMyName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyName.h; sourceTree = "<group>"; };
@@ -28,7 +26,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE310A284F5ED3040AF61F6B /* Pods_WriteMyName.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +44,6 @@
 		B5E77B3502D1FCCB7D830EA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E0EA5C856EFA54AE54ABCBD /* Pods_WriteMyName.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -326,6 +322,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -361,6 +358,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";

@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import FirebaseCore
-import FirebaseFirestore
+import Firebase
+//import FirebaseCore
+//import FirebaseFirestore
 
 public struct WriteName {
     
@@ -28,14 +29,20 @@ public struct WriteName {
     
     func setUpView() {
         
+        print("From WriteName setUpView ...")
         let bundle = Bundle(identifier: "Swirl.WriteMyName")
         let plistPath = bundle?.path(forResource: "GoogleService-Info", ofType: "plist")
+        print("From WriteName setUpView ... 2")
         guard let plistPath = plistPath,
         let options =  FirebaseOptions(contentsOfFile: plistPath)
         else { return }
         if FirebaseApp.app() == nil {
+            print("From FirebaseApp nil ")
             FirebaseApp.configure(options: options)
+        } else {
+            print("From FirebaseApp not nil ")
         }
+        print("From WriteName setUpView ... 3")
     }
     
     func fetchCommentData(streamId: String) {

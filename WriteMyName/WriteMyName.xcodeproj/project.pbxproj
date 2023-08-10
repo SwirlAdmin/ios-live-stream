@@ -69,11 +69,19 @@
 		C847D6272A541B580004467A /* WriteMyName */ = {
 			isa = PBXGroup;
 			children = (
-				C89400B72A5BDE1900DBE3CF /* GoogleService-Info.plist */,
+				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
 			);
 			path = WriteMyName;
+			sourceTree = "<group>";
+		};
+		C8A55FF92A850587001B7322 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C89400B72A5BDE1900DBE3CF /* GoogleService-Info.plist */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

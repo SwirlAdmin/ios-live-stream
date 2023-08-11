@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WriteMyName"
-  spec.version      = "1.1.9"
+  spec.version      = "1.2.0"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the WriteMyName framework."
   
@@ -11,6 +11,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
   spec.source       = { :git => "https://github.com/SwirlAdmin/ios-live-stream.git", :tag => spec.version.to_s }
   spec.source_files  = "WriteMyName/**/*.{swift}"
+  spec.resources = "WriteMyName/WriteMyName/Assets/*"
+  spec.resources = "WriteMyName/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,plist}"
   spec.swift_version = "5.0"
   spec.static_framework = true
   spec.dependency 'FirebaseCore', '10.11.0'

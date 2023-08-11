@@ -34,14 +34,17 @@ public struct WriteName {
         print("From WriteName setUpView ... 2")
         guard let plistPath = plistPath,
         let options =  FirebaseOptions(contentsOfFile: plistPath)
-        else { return }
+        else {
+            print("From WriteName setUpView ... 3")
+            return
+        }
         if FirebaseApp.app() == nil {
             print("From FirebaseApp nil ")
             FirebaseApp.configure(options: options)
         } else {
             print("From FirebaseApp not nil ")
         }
-        print("From WriteName setUpView ... 3")
+        print("From WriteName setUpView ... 4")
     }
     
     func fetchCommentData(streamId: String) {

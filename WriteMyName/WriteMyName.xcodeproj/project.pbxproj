@@ -52,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				C847D6272A541B580004467A /* WriteMyName */,
-				C89400B72A5BDE1900DBE3CF /* GoogleService-Info.plist */,
 				C847D6262A541B580004467A /* Products */,
 				6DDB7B10A3DBAEF7C8769030 /* Pods */,
 				B5E77B3502D1FCCB7D830EA0 /* Frameworks */,
@@ -73,6 +72,7 @@
 				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
+				C89400B72A5BDE1900DBE3CF /* GoogleService-Info.plist */,
 			);
 			path = WriteMyName;
 			sourceTree = "<group>";

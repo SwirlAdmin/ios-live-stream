@@ -22,21 +22,25 @@ public struct WriteName {
     public static func getData() {
         
         let tempObject = WriteName()
-        tempObject.setUpView()
+        let testCode1 = tempObject.setUpView()
+//        if testCode1 == false {
+//            let testCode2 = tempObject.setUpView2()
+//        }
+        print("From getData value : ", testCode1)
         tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
     }
     
-    func setUpView() {
+    func setUpView() -> Bool {
         
         print("From WriteName setUpView ...")
         let bundle = Bundle(identifier: "Swirl.WriteMyName")
         let plistPath = bundle?.path(forResource: "GoogleService-Info", ofType: "plist")
-        print("From WriteName setUpView ... 2")
+        print("From WriteName setUpView plistPath : ", plistPath as Any)
         guard let plistPath = plistPath,
         let options =  FirebaseOptions(contentsOfFile: plistPath)
         else {
             print("From WriteName setUpView ... 3")
-            return
+            return false
         }
         if FirebaseApp.app() == nil {
             print("From FirebaseApp nil ")
@@ -45,6 +49,29 @@ public struct WriteName {
             print("From FirebaseApp not nil ")
         }
         print("From WriteName setUpView ... 4")
+        return true
+    }
+    
+    func setUpView2() -> Bool {
+        
+        print("From WriteName setUpView2 ...")
+        let bundle = Bundle(identifier: "Swirl.WriteMyName")
+        let plistPath = bundle?.path(forResource: "GoogleService-Info", ofType: "plist")
+        print("From WriteName setUpView2 plistPath : ", plistPath as Any)
+        guard let plistPath = plistPath,
+        let options =  FirebaseOptions(contentsOfFile: plistPath)
+        else {
+            print("From WriteName setUpView2 ... 3")
+            return false
+        }
+        if FirebaseApp.app() == nil {
+            print("From FirebaseApp setUpView2 nil ")
+            FirebaseApp.configure(options: options)
+        } else {
+            print("From FirebaseApp setUpView2 not nil ")
+        }
+        print("From WriteName setUpView2 ... 4")
+        return true
     }
     
     func fetchCommentData(streamId: String) {

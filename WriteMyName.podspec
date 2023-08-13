@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WriteMyName"
-  spec.version      = "1.2.2"
+  spec.version      = "1.2.3"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the WriteMyName framework."
   

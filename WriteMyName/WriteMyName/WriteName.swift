@@ -45,10 +45,11 @@ public struct WriteName {
         }
         if FirebaseApp.app() == nil {
             print("From FirebaseApp nil ")
-            FirebaseApp.configure(options: options)
+            //FirebaseApp.configure(options: options)
         } else {
             print("From FirebaseApp not nil ")
         }
+        FirebaseApp.configure(options: options)
         print("From WriteName setUpView ... 4")
         return true
     }
@@ -57,6 +58,7 @@ public struct WriteName {
         
         print("From WriteName setUpView3 ...")
         let options =  FirebaseOptions(googleAppID: "1:379458465537:ios:b49cd992c7fdc25d4f7500", gcmSenderID: "379458465537")
+        
         if FirebaseApp.app() == nil {
             print("From FirebaseApp nil setUpView3 ")
             FirebaseApp.configure(options: options)

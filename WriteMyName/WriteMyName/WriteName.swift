@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 public struct WriteName {
     
+    let objFirebaseApp = FirebaseApp.app()
+    
     public static func sayHello() {
         print("From PMGajjar sayHello")
     }
@@ -22,12 +24,37 @@ public struct WriteName {
     public static func getData() {
         
         let tempObject = WriteName()
-        let testCode1 = tempObject.setUpView()
-        if testCode1 == false {
-            tempObject.setUpView3()
-        }
-        print("From getData value : ", testCode1)
+        tempObject.setUpFireStore()
+        
+//        let testCode1 = tempObject.setUpView()
+//        if testCode1 == false {
+//            tempObject.setUpView3()
+//        }
+//        print("From getData value : ", testCode1)
+        
         tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+    }
+    
+    func setUpFireStore() {
+        
+        print("From setUpFireStore")
+        let secondaryOptions = FirebaseOptions(googleAppID: "1:379458465537:ios:b49cd992c7fdc25d4f7500",
+                                               gcmSenderID: "379458465537")
+        secondaryOptions.apiKey = "AIzaSyDkY6LYbcxYLsPHAG1MV6d3fzN8NuMSlIk"
+        secondaryOptions.projectID = "getnatty-1547727043139"
+
+        //secondaryOptions.bundleID = "com.golive.swirl"
+        secondaryOptions.clientID = "379458465537-vnfja4fcg80h6o4peff3rnq6c1v4clb9.apps.googleusercontent.com"
+        secondaryOptions.databaseURL = "https://getnatty-1547727043139.firebaseio.com"
+        secondaryOptions.storageBucket = "getnatty-1547727043139.appspot.com"
+                
+        //FirebaseApp.configure(name: "secondary", options: secondaryOptions)
+        if self.objFirebaseApp == nil {
+            print("From setUpFireStore objFirebaseApp nil ...")
+            FirebaseApp.configure(options: secondaryOptions)
+        } else {
+            print("From setUpFireStore objFirebaseApp not nil ...")
+        }
     }
     
     func setUpView() -> Bool {
@@ -43,6 +70,7 @@ public struct WriteName {
             print("From WriteName setUpView ... 3")
             return false
         }
+        
         if FirebaseApp.app() == nil {
             print("From FirebaseApp nil ")
             FirebaseApp.configure(options: options)

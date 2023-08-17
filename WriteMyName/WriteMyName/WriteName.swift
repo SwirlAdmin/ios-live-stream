@@ -53,6 +53,9 @@ public struct WriteName {
             print("From setUpFireStore objFirebaseApp nil ...")
             FirebaseApp.configure(options: secondaryOptions)
         } else {
+            self.objFirebaseApp?.delete({ (success) in
+                FirebaseApp.configure(options: secondaryOptions)
+            })
             print("From setUpFireStore objFirebaseApp not nil ...")
         }
     }

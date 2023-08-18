@@ -6,7 +6,7 @@ target 'WriteMyName' do
   use_frameworks!
 
   # Pods for WriteMyName
-  pod 'Alamofire', '~> 4.0'
+  pod 'Alamofire'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/InAppMessaging'

@@ -16,8 +16,6 @@ public struct WriteName {
     var dataRequest : DataRequest!
     var encoding : ParameterEncoding = URLEncoding.default
     
-    var connectorDashboard: Connection?
-    
     public static func sayHello() {
         print("From PMGajjar sayHello")
     }
@@ -38,20 +36,23 @@ public struct WriteName {
 //        print("From getData value : ", testCode1)
         
         tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+        
+        tempObject.getDataFromAPI()
     }
     
     func getDataFromAPI() {
         
-        self.connectorDashboard = Connection.init(TAG: "dashboard_livestream", view: view, myProtocol: self)
-        connectorDashboard?.jsonEncoding(enable: false)
-        connectorDashboard?.requestPost(connectionUrl: Constants.live_schedule_stream, params: [
-            "brand_id": ""
+        print("From getDataFromAPI ...")
+        let connectorDashboard = Connection.init(TAG: "dashboard_livestream", view: UIView(), myProtocol: self)
+        connectorDashboard.jsonEncoding(enable: false)
+        connectorDashboard.requestPost(connectionUrl: "https://api.goswirl.live/index.php/api/Designer/newdashboard", params: [
+            "designer_id": "19791"
         ])
     }
     
     func setUpFireStore() {
         
-        print("From setUpFireStore")
+        print("From setUpFireStore ...")
         let secondaryOptions = FirebaseOptions(googleAppID: "1:379458465537:ios:b49cd992c7fdc25d4f7500",
                                                gcmSenderID: "379458465537")
         secondaryOptions.apiKey = "AIzaSyDkY6LYbcxYLsPHAG1MV6d3fzN8NuMSlIk"
@@ -179,6 +180,7 @@ extension WriteName: ConnectionProtocol {
     
     func Failure(TAG: String, error: String) {
         
+        print("From Failure: ", error)
     }
     
     func NoConnection(TAG: String) {

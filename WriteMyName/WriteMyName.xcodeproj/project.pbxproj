@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40285B053FB557375E272350 /* Pods_WriteMyName.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B53754B8C6760BFF81ACF50 /* Pods_WriteMyName.framework */; };
+		C830D2A62A8F714500009C1C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830D2A52A8F714500009C1C /* Connection.swift */; };
 		C83292872A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist in Resources */ = {isa = PBXBuildFile; fileRef = C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */; };
 		C847D6292A541B580004467A /* WriteMyName.h in Headers */ = {isa = PBXBuildFile; fileRef = C847D6282A541B580004467A /* WriteMyName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C847D6302A541B8C0004467A /* WriteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847D62F2A541B8C0004467A /* WriteName.swift */; };
@@ -15,6 +17,8 @@
 /* Begin PBXFileReference section */
 		24488136B03CF45581F123F6 /* Pods-WriteMyName.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.debug.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.debug.xcconfig"; sourceTree = "<group>"; };
 		4984D5E9E64BF8B86B1D07B4 /* Pods-WriteMyName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.release.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.release.xcconfig"; sourceTree = "<group>"; };
+		7B53754B8C6760BFF81ACF50 /* Pods_WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C830D2A52A8F714500009C1C /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = ../../SwirlFramework/SwirlFramework/Tools/Connection.swift; sourceTree = "<group>"; };
 		C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Goswirl.plist"; sourceTree = "<group>"; };
 		C847D6252A541B580004467A /* WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847D6282A541B580004467A /* WriteMyName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyName.h; sourceTree = "<group>"; };
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40285B053FB557375E272350 /* Pods_WriteMyName.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 		B5E77B3502D1FCCB7D830EA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B53754B8C6760BFF81ACF50 /* Pods_WriteMyName.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,6 +79,7 @@
 				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
+				C830D2A52A8F714500009C1C /* Connection.swift */,
 			);
 			path = WriteMyName;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C847D6302A541B8C0004467A /* WriteName.swift in Sources */,
+				C830D2A62A8F714500009C1C /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

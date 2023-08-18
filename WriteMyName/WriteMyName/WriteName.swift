@@ -8,10 +8,15 @@
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
+import Alamofire
 
 public struct WriteName {
     
     let objFirebaseApp = FirebaseApp.app()
+    var dataRequest : DataRequest!
+    var encoding : ParameterEncoding = URLEncoding.default
+    
+    var connectorDashboard: Connection?
     
     public static func sayHello() {
         print("From PMGajjar sayHello")
@@ -33,6 +38,15 @@ public struct WriteName {
 //        print("From getData value : ", testCode1)
         
         tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+    }
+    
+    func getDataFromAPI() {
+        
+        self.connectorDashboard = Connection.init(TAG: "dashboard_livestream", view: view, myProtocol: self)
+        connectorDashboard?.jsonEncoding(enable: false)
+        connectorDashboard?.requestPost(connectionUrl: Constants.live_schedule_stream, params: [
+            "brand_id": ""
+        ])
     }
     
     func setUpFireStore() {
@@ -153,5 +167,21 @@ public struct WriteName {
             
             //self.arrayOfTempComment = Array(self.comments.reversed())
         }
+    }
+}
+
+extension WriteName: ConnectionProtocol {
+    
+    func Success(TAG: String, json: String, data: Data?) {
+        
+        print("From Success: ", json)
+    }
+    
+    func Failure(TAG: String, error: String) {
+        
+    }
+    
+    func NoConnection(TAG: String) {
+        
     }
 }

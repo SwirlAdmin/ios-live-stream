@@ -26,8 +26,7 @@ class Connection {
     
     private var myProtocol : ConnectionProtocol!
     private var progressProtocol : ProgressProtocol?
-    
-    private var baseUrl = Constants.web_url
+
     private var refreshControl: UIRefreshControl?
     private var isLoading: Bool = false
     private var dataRequest : DataRequest!
@@ -57,19 +56,12 @@ class Connection {
         self.refreshControl =  refreshControl
     }
     
-    func setBaseUrl(baseUrl: String){
-        self.baseUrl =  baseUrl
-    }
     
     func hideLoader(hide : Bool) {
         self.hideLoader = hide
     }
     
     func requestPost(connectionUrl: String, headers: HTTPHeaders = HTTPHeaders.init(), params: Parameters) {
-        
-        Utils.CheckLog(tag: self.TAG, value: "URL: " + connectionUrl)
-        Utils.CheckLog(tag: self.TAG, value: "Headers: \(headers)")
-        Utils.CheckLog(tag: self.TAG, value: "Parameters: \(params)")
         
         //self.loading(status: true)
         //print("From requestPost : ", self.baseUrl + connectionUrl)
@@ -80,22 +72,20 @@ class Connection {
 //          print(data)
 //        }
         
-        
-//
-        self.dataRequest = Alamofire.request(self.baseUrl + connectionUrl, method: HTTPMethod.post, parameters: params, encoding: self.encoding, headers: headers).responseString {
+        self.dataRequest = Alamofire.request(connectionUrl, method: HTTPMethod.post, parameters: params, encoding: self.encoding, headers: headers).responseString {
             response in
             
             //self.loading(status: false)
             
             switch response.result {
             case let .success(value):
-                //print(value)
+                print("From requestPost success : ",value)
                 //Utils.CheckLog(tag: self.TAG, value: "RequestPost Json: " + value)
                 self.myProtocol.Success(TAG: self.TAG, json: value, data: nil)
                 break
             case let .failure(error):
-                print(error)
-                Utils.CheckLog(tag: self.TAG, value: "Error: " + error.localizedDescription)
+                print("From requestPost error : ",error)
+                //Utils.CheckLog(tag: self.TAG, value: "Error: " + error.localizedDescription)
                 self.myProtocol.Failure(TAG: self.TAG, error: error.localizedDescription)
                 break
             }
@@ -115,47 +105,6 @@ class Connection {
         }
     }
 
-    func requestGet(connectionUrl: String, headers: HTTPHeaders = HTTPHeaders.init(), params: Parameters) {
-        
-        Utils.CheckLog(tag: self.TAG, value: "URL: " + connectionUrl)
-        Utils.CheckLog(tag: self.TAG, value: "Headers: \(headers)")
-        Utils.CheckLog(tag: self.TAG, value: "Parameters: \(params)")
-        
-        self.loading(status: true)
-        
-        self.dataRequest = Alamofire.request(self.baseUrl + connectionUrl, method: HTTPMethod.get, parameters: params, encoding: self.encoding, headers: headers).responseString {
-            response in
-            
-            self.loading(status: false)
-            
-            switch response.result {
-            case let .success(value):
-                print(value)
-                Utils.CheckLog(tag: self.TAG, value: "Json: " + value)
-                self.myProtocol.Success(TAG: self.TAG, json: value, data: nil)
-                break
-            case let .failure(error):
-                print(error)
-                Utils.CheckLog(tag: self.TAG, value: "Error: " + error.localizedDescription)
-                self.myProtocol.Failure(TAG: self.TAG, error: error.localizedDescription)
-                break
-            }
-            
-//            switch response.result {
-//            case .success:
-//                if let json = response.result.value {
-//                    Utils.CheckLog(tag: self.TAG, value: "Json: " + json)
-//                    self.myProtocol.Success(TAG: self.TAG, json: json, data: nil)
-//                }
-//                break
-//            case .failure(let error):
-//                Utils.CheckLog(tag: self.TAG, value: "Error: " + error.localizedDescription)
-//                self.myProtocol.Failure(TAG: self.TAG, error: error.localizedDescription)
-//                break
-//            }
-        }
-    }
-    
     /*func requestUpload(connectionUrl: String, imageName: String, imageType: String, params: Parameters, files: Parameters) {
         
         Utils.CheckLog(tag: self.TAG, value: "URL: " + connectionUrl)
@@ -320,82 +269,4 @@ class Connection {
             }
         })
     }*/
-    
-    
-    func requestDownload(connectionUrl : String){
-        
-        Utils.CheckLog(tag: self.TAG, value: "URL: " + connectionUrl)
-        self.loading(status: true)
-        
-        let downloadUrl = URL.init(string: connectionUrl)!
-        self.dataRequest = Alamofire.request(downloadUrl).responseData { response in
-            self.loading(status: false)
-            
-            switch response.result {
-            case let .success(value):
-                let downloadName = "download_\(Utils.getCurrentTime()).\(downloadUrl.pathExtension)"
-                let path = Utils.getDirectoryPath().appendingPathComponent(downloadName)
-                if Utils.createFile(dataPath: path, data: value) {
-                    self.myProtocol.Success(TAG: self.TAG, json: path, data: value)
-                } else {
-                    self.myProtocol.Failure(TAG: self.TAG, error: "Failed to download file.")
-                }
-                break
-            case let .failure(error):
-                print(error)
-                Utils.CheckLog(tag: self.TAG, value: "Error: " + error.localizedDescription)
-                self.myProtocol.Failure(TAG: self.TAG, error: error.localizedDescription)
-                break
-            }
-        }
-    }
-    
-    private func loading(status: Bool, message: String = ""){
-        if status {
-            if self.isLoading {
-                return
-            }
-            
-            if !isInternetAvailable() {
-                self.myProtocol.NoConnection(TAG: self.TAG)
-                return
-            }
-            
-            if !self.hideLoader {
-                CustomActivityIndicator.show(message, userInteractionStatus: false)
-            }
-            
-            if let control = self.refreshControl, !control.isRefreshing {
-                control.beginRefreshing()
-            }
-            
-            self.isLoading = true
-            
-        } else {
-            CustomActivityIndicator.dismiss()
-            
-            if let control = self.refreshControl, control.isRefreshing {
-                control.endRefreshing()
-            }
-            self.isLoading = false
-        }
-    }
-    
-    func isInternetAvailable() -> Bool{
-        if let internet = Alamofire.NetworkReachabilityManager.init() {
-            return internet.isReachable
-        }
-        return false
-    }
-    
-    func cancelDataRequest(){
-        if self.dataRequest != nil {
-            self.dataRequest.cancel()
-        }
-        
-        if self.uploadRequest != nil {
-            self.uploadRequest.cancel()
-        }
-    }
-    
 }

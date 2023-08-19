@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		40285B053FB557375E272350 /* Pods_WriteMyName.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B53754B8C6760BFF81ACF50 /* Pods_WriteMyName.framework */; };
-		C830D2A82A8F8E4400009C1C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830D2A72A8F8E4300009C1C /* Connection.swift */; };
+		C81067352A90964100BFF0E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81067342A90964100BFF0E3 /* HomeViewController.swift */; };
+		C81067372A90966B00BFF0E3 /* Swirl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81067362A90966B00BFF0E3 /* Swirl.storyboard */; };
 		C83292872A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist in Resources */ = {isa = PBXBuildFile; fileRef = C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */; };
 		C847D6292A541B580004467A /* WriteMyName.h in Headers */ = {isa = PBXBuildFile; fileRef = C847D6282A541B580004467A /* WriteMyName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C847D6302A541B8C0004467A /* WriteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847D62F2A541B8C0004467A /* WriteName.swift */; };
@@ -18,7 +19,8 @@
 		24488136B03CF45581F123F6 /* Pods-WriteMyName.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.debug.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.debug.xcconfig"; sourceTree = "<group>"; };
 		4984D5E9E64BF8B86B1D07B4 /* Pods-WriteMyName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteMyName.release.xcconfig"; path = "Target Support Files/Pods-WriteMyName/Pods-WriteMyName.release.xcconfig"; sourceTree = "<group>"; };
 		7B53754B8C6760BFF81ACF50 /* Pods_WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C830D2A72A8F8E4300009C1C /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		C81067342A90964100BFF0E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C81067362A90966B00BFF0E3 /* Swirl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Swirl.storyboard; sourceTree = "<group>"; };
 		C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Goswirl.plist"; sourceTree = "<group>"; };
 		C847D6252A541B580004467A /* WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847D6282A541B580004467A /* WriteMyName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyName.h; sourceTree = "<group>"; };
@@ -79,7 +81,8 @@
 				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
-				C830D2A72A8F8E4300009C1C /* Connection.swift */,
+				C81067342A90964100BFF0E3 /* HomeViewController.swift */,
+				C81067362A90966B00BFF0E3 /* Swirl.storyboard */,
 			);
 			path = WriteMyName;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81067372A90966B00BFF0E3 /* Swirl.storyboard in Resources */,
 				C83292872A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C847D6302A541B8C0004467A /* WriteName.swift in Sources */,
-				C830D2A82A8F8E4400009C1C /* Connection.swift in Sources */,
+				C81067352A90964100BFF0E3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

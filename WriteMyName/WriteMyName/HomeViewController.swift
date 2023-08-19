@@ -1,39 +1,36 @@
 //
-//  WriteName.swift
+//  HomeViewController.swift
 //  WriteMyName
 //
-//  Created by Pinkesh Gajjar on 04/07/23.
+//  Created by Pinkesh Gajjar on 19/08/23.
 //
 
-import Foundation
+import UIKit
 import FirebaseCore
 import FirebaseFirestore
 
-public struct WriteName {
+public class HomeViewController: UIViewController {
     
     let objFirebaseApp = FirebaseApp.app()
-    
-    
-    public static func sayHello() {
-        print("From PMGajjar sayHello")
-    }
-    
-    public static func sayHi() {
-        print("From Pinkesh Gajjar sayHi")
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
     
     public static func getData() {
         
-        let tempObject = WriteName()
-        tempObject.setUpFireStore()
-        
-//        let testCode1 = tempObject.setUpView()
-//        if testCode1 == false {
-//            tempObject.setUpView3()
-//        }
-//        print("From getData value : ", testCode1)
-        
-        tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+//        let tempObject = WriteName()
+//        tempObject.setUpFireStore()
+//
+////        let testCode1 = tempObject.setUpView()
+////        if testCode1 == false {
+////            tempObject.setUpView3()
+////        }
+////        print("From getData value : ", testCode1)
+//
+//        tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
     }
     
     func setUpFireStore() {
@@ -59,61 +56,8 @@ public struct WriteName {
             })
             print("From setUpFireStore objFirebaseApp not nil ...")
         }
-    }
-    
-    func setUpView() -> Bool {
         
-        print("From WriteName setUpView ...")
-        //let bundle = Bundle(identifier: "Swirl.WriteMyName")
-        //let plistPath = bundle?.path(forResource: "GoogleService-Info-Goswirl", ofType: "plist")
-        let plistPath = Bundle.main.path(forResource: "GoogleService-Info-Goswirl", ofType: "plist")
-        print("From WriteName setUpView plistPath : ", plistPath as Any)
-        guard let plistPath = plistPath,
-        let options =  FirebaseOptions(contentsOfFile: plistPath)
-        else {
-            print("From WriteName setUpView ... 3")
-            return false
-        }
-        
-        if FirebaseApp.app() == nil {
-            print("From FirebaseApp nil ")
-            FirebaseApp.configure(options: options)
-        } else {
-            print("From FirebaseApp not nil ")
-        }
-        print("From WriteName setUpView ... 4")
-        return true
-    }
-    
-    func setUpView3() {
-        
-        print("From WriteName setUpView3 ...")
-        let options =  FirebaseOptions(googleAppID: "1:379458465537:ios:b49cd992c7fdc25d4f7500", gcmSenderID: "379458465537")
-        
-        if FirebaseApp.app() == nil {
-            print("From FirebaseApp nil setUpView3 ")
-            FirebaseApp.configure(options: options)
-        } else {
-            print("From FirebaseApp not nil setUpView3 ")
-        }
-        print("From WriteName setUpView3 ... 2")
-    }
-    
-    func setUpView2() {
-        
-        print("From WriteName setUpView2 ...")
-        let bundle = Bundle.main.path(forResource: "GoogleService-Info-Goswirl", ofType: "plist")
-        print("From WriteName setUpView2 plistPath : ", bundle as Any)
-        if bundle != nil {
-            let data :NSData? = NSData(contentsOfFile: bundle!)
-            if data != nil {
-                let datasourceDictionary = try! PropertyListSerialization.propertyList(from: data! as Data, options: [], format: nil) as! [String:Any]
-                print("From WriteName setUpView2 ...2")
-                print(datasourceDictionary.self)
-            }
-            print("From WriteName setUpView2 ...3")
-        }
-        print("From WriteName setUpView2 ...4")
+        self.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
     }
     
     func fetchCommentData(streamId: String) {
@@ -155,6 +99,9 @@ public struct WriteName {
             //self.arrayOfTempComment = Array(self.comments.reversed())
         }
     }
+    
+    @IBAction func btnClick(_ sender: UIButton) {
+        
+        self.setUpFireStore()
+    }
 }
-
-

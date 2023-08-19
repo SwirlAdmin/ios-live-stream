@@ -13,6 +13,11 @@
 		C83292872A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist in Resources */ = {isa = PBXBuildFile; fileRef = C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */; };
 		C847D6292A541B580004467A /* WriteMyName.h in Headers */ = {isa = PBXBuildFile; fileRef = C847D6282A541B580004467A /* WriteMyName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C847D6302A541B8C0004467A /* WriteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847D62F2A541B8C0004467A /* WriteName.swift */; };
+		C8C1ABB82A91361E00E8D44E /* Floater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1ABB72A91361E00E8D44E /* Floater.swift */; };
+		C8C1ABBD2A91367700E8D44E /* heart3.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C1ABB92A91367700E8D44E /* heart3.png */; };
+		C8C1ABBE2A91367700E8D44E /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C1ABBA2A91367700E8D44E /* heart1.png */; };
+		C8C1ABBF2A91367700E8D44E /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C1ABBB2A91367700E8D44E /* heart2.png */; };
+		C8C1ABC02A91367700E8D44E /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C1ABBC2A91367700E8D44E /* smiley.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		C847D6252A541B580004467A /* WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847D6282A541B580004467A /* WriteMyName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyName.h; sourceTree = "<group>"; };
 		C847D62F2A541B8C0004467A /* WriteName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteName.swift; sourceTree = "<group>"; };
+		C8C1ABB72A91361E00E8D44E /* Floater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floater.swift; sourceTree = "<group>"; };
+		C8C1ABB92A91367700E8D44E /* heart3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart3.png; sourceTree = "<group>"; };
+		C8C1ABBA2A91367700E8D44E /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
+		C8C1ABBB2A91367700E8D44E /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
+		C8C1ABBC2A91367700E8D44E /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +87,16 @@
 		C847D6272A541B580004467A /* WriteMyName */ = {
 			isa = PBXGroup;
 			children = (
+				C8C1ABBA2A91367700E8D44E /* heart1.png */,
+				C8C1ABBB2A91367700E8D44E /* heart2.png */,
+				C8C1ABB92A91367700E8D44E /* heart3.png */,
+				C8C1ABBC2A91367700E8D44E /* smiley.png */,
 				C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */,
 				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
 				C81067342A90964100BFF0E3 /* HomeViewController.swift */,
+				C8C1ABB72A91361E00E8D44E /* Floater.swift */,
 				C81067362A90966B00BFF0E3 /* Swirl.storyboard */,
 			);
 			path = WriteMyName;
@@ -165,7 +180,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C1ABBD2A91367700E8D44E /* heart3.png in Resources */,
 				C81067372A90966B00BFF0E3 /* Swirl.storyboard in Resources */,
+				C8C1ABBE2A91367700E8D44E /* heart1.png in Resources */,
+				C8C1ABBF2A91367700E8D44E /* heart2.png in Resources */,
+				C8C1ABC02A91367700E8D44E /* smiley.png in Resources */,
 				C83292872A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +223,7 @@
 			files = (
 				C847D6302A541B8C0004467A /* WriteName.swift in Sources */,
 				C81067352A90964100BFF0E3 /* HomeViewController.swift in Sources */,
+				C8C1ABB82A91361E00E8D44E /* Floater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

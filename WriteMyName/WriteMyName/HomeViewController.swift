@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 public class HomeViewController: UIViewController {
     
+    @IBOutlet weak var viewFloater: Floater!
+    
     let objFirebaseApp = FirebaseApp.app()
 
     public override func viewDidLoad() {
@@ -103,5 +105,12 @@ public class HomeViewController: UIViewController {
     @IBAction func btnClick(_ sender: UIButton) {
         
         self.setUpFireStore()
+        
+        self.viewFloater.startAnimation()
+        
+        let when = DispatchTime.now() + 3
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.viewFloater.stopAnimation()
+        }
     }
 }

@@ -99,7 +99,7 @@ open class Request {
     }
 
     /// The underlying task.
-    open var task: URLSessionTask? { return delegate.task }
+    public var task: URLSessionTask? { return delegate.task }
 
     /// The session belonging to the underlying task.
     public let session: URLSession
@@ -173,7 +173,7 @@ open class Request {
     ///
     /// - returns: The request.
     @discardableResult
-    open func authenticate(usingCredential credential: URLCredential) -> Self {
+    public func authenticate(usingCredential credential: URLCredential) -> Self {
         delegate.credential = credential
         return self
     }
@@ -184,7 +184,7 @@ open class Request {
     /// - parameter password: The password.
     ///
     /// - returns: A tuple with Authorization header and credential value if encoding succeeds, `nil` otherwise.
-    open class func authorizationHeader(user: String, password: String) -> (key: String, value: String)? {
+    public class func authorizationHeader(user: String, password: String) -> (key: String, value: String)? {
         guard let data = "\(user):\(password)".data(using: .utf8) else { return nil }
 
         let credential = data.base64EncodedString(options: [])
@@ -195,7 +195,7 @@ open class Request {
     // MARK: State
 
     /// Resumes the request.
-    open func resume() {
+    public func resume() {
         guard let task = task else { delegate.queue.isSuspended = false ; return }
 
         if startTime == nil { startTime = CFAbsoluteTimeGetCurrent() }

@@ -25,7 +25,7 @@
 import Foundation
 
 /// Responsible for creating and managing `Request` objects, as well as their underlying `NSURLSession`.
-open class SessionManager {
+public class SessionManager {
 
     // MARK: - Helper Types
 
@@ -127,13 +127,13 @@ open class SessionManager {
     public let delegate: SessionDelegate
 
     /// Whether to start requests immediately after being constructed. `true` by default.
-    open var startRequestsImmediately: Bool = true
+    public var startRequestsImmediately: Bool = true
 
     /// The request adapter called each time a new request is created.
-    open var adapter: RequestAdapter?
+    public var adapter: RequestAdapter?
 
     /// The request retrier called each time a request encounters an error to determine whether to retry the request.
-    open var retrier: RequestRetrier? {
+    public var retrier: RequestRetrier? {
         get { return delegate.retrier }
         set { delegate.retrier = newValue }
     }
@@ -147,7 +147,7 @@ open class SessionManager {
     /// SessionDelegate `sessionDidFinishEventsForBackgroundURLSession` and manually call the handler when finished.
     ///
     /// `nil` by default.
-    open var backgroundCompletionHandler: (() -> Void)?
+    public var backgroundCompletionHandler: (() -> Void)?
 
     let queue = DispatchQueue(label: "org.alamofire.session-manager." + UUID().uuidString)
 

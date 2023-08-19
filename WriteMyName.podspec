@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WriteMyName"
-  spec.version      = "1.3.3"
+  spec.version      = "1.3.4"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the WriteMyName framework."
   
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.resources = "WriteMyName/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,plist}"
   spec.swift_version = "5.0"
   spec.static_framework = true
-  spec.dependency 'Alamofire', '4.0'
+  spec.dependency 'Alamofire', '5.7.1'
   spec.dependency 'FirebaseCore', '10.11.0'
   spec.dependency 'Firebase/Firestore', '10.11.0'
 end

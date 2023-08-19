@@ -72,7 +72,7 @@ class Connection {
 //          print(data)
 //        }
         
-        self.dataRequest = AF.request(connectionUrl, method: HTTPMethod.post, parameters: params, encoding: self.encoding, headers: headers).responseString {
+        self.dataRequest = Alamofire.request(connectionUrl, method: HTTPMethod.post, parameters: params, encoding: self.encoding, headers: headers).responseString {
             response in
             
             //self.loading(status: false)

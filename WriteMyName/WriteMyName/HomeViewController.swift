@@ -25,7 +25,11 @@ public class HomeViewController: UIViewController {
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         
-        FirebaseApp.configure()
+        if self.objFirebaseApp != nil {
+            self.objFirebaseApp?.delete({ (success) in
+                FirebaseApp.configure()
+            })
+        }
     }
     
     public static func getData() {

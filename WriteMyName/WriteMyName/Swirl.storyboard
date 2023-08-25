@@ -45,7 +45,7 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="floaterImage4" value="smiley.png"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart2.png" translatesAutoresizingMaskIntoConstraints="NO" id="WSc-qb-IlL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo" translatesAutoresizingMaskIntoConstraints="NO" id="WSc-qb-IlL">
                                 <rect key="frame" x="181.66666666666666" y="266" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WSc-qb-IlL" secondAttribute="height" multiplier="1:1" id="DyG-41-hPw"/>
@@ -76,6 +76,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="demo" width="52" height="52"/>
         <image name="heart1.png" width="256" height="256"/>
         <image name="heart2.png" width="128" height="128"/>
         <image name="heart3.png" width="128" height="128"/>

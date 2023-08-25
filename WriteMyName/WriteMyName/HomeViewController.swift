@@ -19,6 +19,13 @@ public class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setUpFireStore()
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        FirebaseApp.configure()
     }
     
     public static func getData() {
@@ -58,8 +65,6 @@ public class HomeViewController: UIViewController {
             })
             print("From setUpFireStore objFirebaseApp not nil ...")
         }
-        
-        self.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
     }
     
     func fetchCommentData(streamId: String) {
@@ -104,7 +109,7 @@ public class HomeViewController: UIViewController {
     
     @IBAction func btnClick(_ sender: UIButton) {
         
-        self.setUpFireStore()
+        self.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
         
         self.viewFloater.startAnimation()
         

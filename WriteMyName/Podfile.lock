@@ -774,12 +774,16 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - ObjectMapper (4.2.0)
   - PromisesObjC (2.3.1)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/InAppMessaging
   - Firebase/Messaging
+  - ObjectMapper
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -799,7 +803,9 @@ SPEC REPOS:
     - gRPC-Core
     - leveldb-library
     - nanopb
+    - ObjectMapper
     - PromisesObjC
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
@@ -818,8 +824,10 @@ SPEC CHECKSUMS:
   gRPC-Core: 17108291d84332196d3c8466b48f016fc17d816d
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 55b19f7a7e5016e7d6748fad020ddf98214159e5
+PODFILE CHECKSUM: 1cc6e504fc90754f785998cf7faee8905e5c030e
 
 COCOAPODS: 1.12.0

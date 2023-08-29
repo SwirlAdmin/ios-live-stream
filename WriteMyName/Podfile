@@ -10,7 +10,7 @@ target 'WriteMyName' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/InAppMessaging'
-  pod 'SwiftyJSON'
-  pod 'ObjectMapper'
+  pod 'IQKeyboardManagerSwift','6.5.0'
+  pod 'TTGSnackbar'
 
 end

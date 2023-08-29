@@ -8,42 +8,34 @@
 import UIKit
 import FirebaseCore
 import FirebaseFirestore
+import IQKeyboardManagerSwift
 
 public class HomeViewController: UIViewController {
     
-    @IBOutlet weak var viewFloater: Floater!
-    
-    let objFirebaseApp = FirebaseApp.app()
+    //let objFirebaseApp = FirebaseApp.app()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setUpView()
         self.setUpFireStore()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         
-        if self.objFirebaseApp != nil {
-            self.objFirebaseApp?.delete({ (success) in
-                FirebaseApp.configure()
-            })
-        }
     }
     
     public static func getData() {
         
-//        let tempObject = WriteName()
-//        tempObject.setUpFireStore()
-//
-////        let testCode1 = tempObject.setUpView()
-////        if testCode1 == false {
-////            tempObject.setUpView3()
-////        }
-////        print("From getData value : ", testCode1)
-//
-//        tempObject.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+    }
+    
+    func setUpView() {
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarBarTintColor = .white
+        IQKeyboardManager.shared.toolbarTintColor = UIColor.init(named: "keyboardColor")
     }
     
     func setUpFireStore() {
@@ -60,13 +52,11 @@ public class HomeViewController: UIViewController {
         secondaryOptions.storageBucket = "getnatty-1547727043139.appspot.com"
                 
         //FirebaseApp.configure(name: "secondary", options: secondaryOptions)
-        if self.objFirebaseApp == nil {
+        
+        if FirebaseApp.app() == nil {
             print("From setUpFireStore objFirebaseApp nil ...")
             FirebaseApp.configure(options: secondaryOptions)
         } else {
-            self.objFirebaseApp?.delete({ (success) in
-                FirebaseApp.configure(options: secondaryOptions)
-            })
             print("From setUpFireStore objFirebaseApp not nil ...")
         }
     }
@@ -113,13 +103,12 @@ public class HomeViewController: UIViewController {
     
     @IBAction func btnClick(_ sender: UIButton) {
         
+        popSnackBar(message: "Fetch Data from FireStore ...")
         self.fetchCommentData(streamId: "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI")
+    }
+    
+    func popSnackBar(message: String) {
         
-        self.viewFloater.startAnimation()
-        
-        let when = DispatchTime.now() + 3
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.viewFloater.stopAnimation()
-        }
+        Utils.popSnackBar(containerView: self.view, message: message)
     }
 }

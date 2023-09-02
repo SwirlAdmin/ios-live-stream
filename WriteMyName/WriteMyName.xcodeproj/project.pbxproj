@@ -14,6 +14,7 @@
 		C833E25E2A98AF2000FF7816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C833E25D2A98AF2000FF7816 /* Assets.xcassets */; };
 		C847D6292A541B580004467A /* WriteMyName.h in Headers */ = {isa = PBXBuildFile; fileRef = C847D6282A541B580004467A /* WriteMyName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C847D6302A541B8C0004467A /* WriteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847D62F2A541B8C0004467A /* WriteName.swift */; };
+		C88BD9462AA3AE3600C73B0D /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BD9452AA3AE3600C73B0D /* DesignableTextField.swift */; };
 		C8C1ABB82A91361E00E8D44E /* Floater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1ABB72A91361E00E8D44E /* Floater.swift */; };
 		C8DD18442A9DC1280087ECF1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD18432A9DC1280087ECF1 /* Utils.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		C847D6252A541B580004467A /* WriteMyName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WriteMyName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847D6282A541B580004467A /* WriteMyName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMyName.h; sourceTree = "<group>"; };
 		C847D62F2A541B8C0004467A /* WriteName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteName.swift; sourceTree = "<group>"; };
+		C88BD9452AA3AE3600C73B0D /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		C8C1ABB72A91361E00E8D44E /* Floater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floater.swift; sourceTree = "<group>"; };
 		C8DD18432A9DC1280087ECF1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,23 +86,32 @@
 			isa = PBXGroup;
 			children = (
 				C83292862A87AB8B00FF9487 /* GoogleService-Info-Goswirl.plist */,
-				C8A55FF92A850587001B7322 /* Assets */,
 				C847D6282A541B580004467A /* WriteMyName.h */,
 				C847D62F2A541B8C0004467A /* WriteName.swift */,
 				C81067342A90964100BFF0E3 /* HomeViewController.swift */,
-				C8DD18432A9DC1280087ECF1 /* Utils.swift */,
-				C8C1ABB72A91361E00E8D44E /* Floater.swift */,
+				C88BD9472AA3B0A000C73B0D /* Tools */,
+				C88BD9442AA3AE0900C73B0D /* CustomControl */,
 				C81067362A90966B00BFF0E3 /* Swirl.storyboard */,
 				C833E25D2A98AF2000FF7816 /* Assets.xcassets */,
 			);
 			path = WriteMyName;
 			sourceTree = "<group>";
 		};
-		C8A55FF92A850587001B7322 /* Assets */ = {
+		C88BD9442AA3AE0900C73B0D /* CustomControl */ = {
 			isa = PBXGroup;
 			children = (
+				C88BD9452AA3AE3600C73B0D /* DesignableTextField.swift */,
 			);
-			path = Assets;
+			path = CustomControl;
+			sourceTree = "<group>";
+		};
+		C88BD9472AA3B0A000C73B0D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C8DD18432A9DC1280087ECF1 /* Utils.swift */,
+				C8C1ABB72A91361E00E8D44E /* Floater.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			files = (
 				C847D6302A541B8C0004467A /* WriteName.swift in Sources */,
 				C81067352A90964100BFF0E3 /* HomeViewController.swift in Sources */,
+				C88BD9462AA3AE3600C73B0D /* DesignableTextField.swift in Sources */,
 				C8C1ABB82A91361E00E8D44E /* Floater.swift in Sources */,
 				C8DD18442A9DC1280087ECF1 /* Utils.swift in Sources */,
 			);

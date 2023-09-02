@@ -19,5 +19,11 @@ target 'SwirlFramework' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/InAppMessaging'
-  
+
+  pod 'WriteMyName/Firebase/Firestore'
+  pod 'WriteMyName/Firebase/Messaging'
+  pod 'WriteMyName/Firebase/InAppMessaging'
+
+  pod 'WriteMyName'
+
 end

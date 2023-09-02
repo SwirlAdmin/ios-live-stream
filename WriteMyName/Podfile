@@ -12,5 +12,6 @@ target 'WriteMyName' do
   pod 'Firebase/InAppMessaging'
   pod 'IQKeyboardManagerSwift','6.5.0'
   pod 'TTGSnackbar'
+  pod 'SDWebImage'
 
 end

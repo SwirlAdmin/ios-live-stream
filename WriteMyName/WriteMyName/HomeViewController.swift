@@ -10,10 +10,13 @@ import FirebaseCore
 import FirebaseFirestore
 import IQKeyboardManagerSwift
 
-public class HomeViewController: UIViewController {
+public class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //let objFirebaseApp = FirebaseApp.app()
-
+    @IBOutlet weak var txtField: DesignableTextField!
+    @IBOutlet weak var imgView: UIImageView!
+    
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,13 @@ public class HomeViewController: UIViewController {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarBarTintColor = .white
         IQKeyboardManager.shared.toolbarTintColor = UIColor.init(named: "keyboardColor")
+        self.setUpImageView()
+    }
+    
+    func setUpImageView() {
+        
+        let tempStr = "https://gn-static01.ams3.digitaloceanspaces.com/assets/files/medium/1684845756istockphoto-1409298953-170667a.jpg"
+        self.imgView.loadImage(imageUrl: tempStr, placeHolder: "demo", isCache: true, contentMode: .scaleAspectFill)
     }
     
     func setUpFireStore() {

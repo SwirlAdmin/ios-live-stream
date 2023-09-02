@@ -38,24 +38,50 @@
                                     <constraint firstAttribute="height" constant="30" id="YGV-cP-T4R"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-Ri-Prt" customClass="DesignableTextField" customModule="WriteMyName" customModuleProvider="target">
+                                <rect key="frame" x="50" y="376" width="293" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAC-1w-9m5">
+                                <rect key="frame" x="226.66666666666666" y="256" width="49.999999999999972" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9Vx-AZ-FO3"/>
+                                    <constraint firstAttribute="height" constant="50" id="cHZ-7Q-pF5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HAC-1w-9m5" firstAttribute="centerY" secondItem="WSc-qb-IlL" secondAttribute="centerY" id="2s4-7d-e5N"/>
                             <constraint firstItem="A5V-yt-sHy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="CRv-U9-Mve"/>
+                            <constraint firstItem="dnx-Ri-Prt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="OK9-11-TYB"/>
+                            <constraint firstItem="dnx-Ri-Prt" firstAttribute="top" secondItem="WSc-qb-IlL" secondAttribute="bottom" constant="80" id="RuU-6n-yC8"/>
                             <constraint firstItem="WSc-qb-IlL" firstAttribute="top" secondItem="LP9-xo-Bbk" secondAttribute="bottom" constant="8" id="UBS-0f-Asw"/>
                             <constraint firstItem="LP9-xo-Bbk" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="W6e-vB-vAn"/>
                             <constraint firstItem="WSc-qb-IlL" firstAttribute="centerX" secondItem="LP9-xo-Bbk" secondAttribute="centerX" id="XCJ-9n-lHE"/>
                             <constraint firstItem="LP9-xo-Bbk" firstAttribute="top" secondItem="A5V-yt-sHy" secondAttribute="bottom" constant="70" id="fX1-fn-QML"/>
+                            <constraint firstItem="HAC-1w-9m5" firstAttribute="leading" secondItem="WSc-qb-IlL" secondAttribute="trailing" constant="15" id="gAT-2z-kve"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dnx-Ri-Prt" secondAttribute="trailing" constant="50" id="iAf-jR-ZVS"/>
                             <constraint firstItem="A5V-yt-sHy" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="vvy-pu-n32"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="HAC-1w-9m5" id="Cc5-lK-OCJ"/>
+                        <outlet property="txtField" destination="dnx-Ri-Prt" id="sfJ-5l-6Lk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-48" y="-27"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dnx-Ri-Prt">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="demo" width="52" height="52"/>
         <systemColor name="systemBackgroundColor">

@@ -1,0 +1,6 @@
+framework module WriteMyName {
+  umbrella header "WriteMyName-umbrella.h"
+
+  export *
+  module * { export * }
+}

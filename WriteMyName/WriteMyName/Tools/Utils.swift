@@ -12,6 +12,7 @@ import TTGSnackbar
 import AVFoundation
 import AVKit
 import Foundation
+import SDWebImage
 
 class Utils {
     
@@ -321,26 +322,26 @@ class Utils {
 
 }
 
-//extension UIImageView {
-//    
-//    public func loadImage(imageUrl : String?, placeHolder : String, isCache : Bool, contentMode: UIView.ContentMode = .scaleAspectFit) {
-//        if let urlString = imageUrl?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let image_url = URL.init(string: urlString) {
-//            loadImage(imageUrl: image_url, placeHolder: placeHolder, isCache: isCache, contentMode: contentMode)
-//        } else {
-//            self.image = UIImage.init(named: placeHolder)
-//        }
-//    }
-//    
-//    public func loadImage(imageUrl : URL?, placeHolder : String, isCache : Bool, contentMode: UIView.ContentMode = .scaleAspectFit) {
-//        if !isCache {
-//            SDImageCache.shared.clearMemory()
-//            SDImageCache.shared.clearDisk()
-//        }
-//        self.contentMode = contentMode
-//        self.layer.masksToBounds = true
-//        self.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: placeHolder))
-//    }
-//}
+extension UIImageView {
+    
+    public func loadImage(imageUrl : String?, placeHolder : String, isCache : Bool, contentMode: UIView.ContentMode = .scaleAspectFit) {
+        if let urlString = imageUrl?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let image_url = URL.init(string: urlString) {
+            loadImage(imageUrl: image_url, placeHolder: placeHolder, isCache: isCache, contentMode: contentMode)
+        } else {
+            self.image = UIImage.init(named: placeHolder)
+        }
+    }
+    
+    public func loadImage(imageUrl : URL?, placeHolder : String, isCache : Bool, contentMode: UIView.ContentMode = .scaleAspectFit) {
+        if !isCache {
+            SDImageCache.shared.clearMemory()
+            SDImageCache.shared.clearDisk()
+        }
+        self.contentMode = contentMode
+        self.layer.masksToBounds = true
+        self.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: placeHolder))
+    }
+}
 
 extension UIImage {
     

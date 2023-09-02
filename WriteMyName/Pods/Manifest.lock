@@ -776,6 +776,9 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.3.1)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
   - TTGSnackbar (1.11.1)
 
 DEPENDENCIES:
@@ -783,6 +786,7 @@ DEPENDENCIES:
   - Firebase/InAppMessaging
   - Firebase/Messaging
   - IQKeyboardManagerSwift (= 6.5.0)
+  - SDWebImage
   - TTGSnackbar
 
 SPEC REPOS:
@@ -805,6 +809,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SDWebImage
     - TTGSnackbar
 
 SPEC CHECKSUMS:
@@ -826,8 +831,9 @@ SPEC CHECKSUMS:
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   TTGSnackbar: fea91c62637b5662f808a4c3b55f7631cb7e1ef7
 
-PODFILE CHECKSUM: 211aa0feeb33114a3debca925779ff6c73237b6b
+PODFILE CHECKSUM: 9d5db1b78be8124e210694594c579c9121b54246
 
 COCOAPODS: 1.12.0

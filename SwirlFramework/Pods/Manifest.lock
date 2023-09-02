@@ -337,6 +337,7 @@ PODS:
   - SDWebImage/Core (5.15.5)
   - SwiftyJSON (4.3.0)
   - TTGSnackbar (1.11.1)
+  - WriteMyName (1.0.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -350,6 +351,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0)
   - SwiftyJSON (~> 4.0)
   - TTGSnackbar
+  - WriteMyName
 
 SPEC REPOS:
   trunk:
@@ -380,6 +382,7 @@ SPEC REPOS:
     - SDWebImage
     - SwiftyJSON
     - TTGSnackbar
+    - WriteMyName
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -409,7 +412,8 @@ SPEC CHECKSUMS:
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TTGSnackbar: fea91c62637b5662f808a4c3b55f7631cb7e1ef7
+  WriteMyName: 82c8eaa07b51d53830fd2b8463a4fd33f0e85054
 
-PODFILE CHECKSUM: dc168c177bfc67b5ffa4dceb092367f81f82f611
+PODFILE CHECKSUM: 918dfc046c000500a1c0c0e1c266bf08f3cd2013
 
 COCOAPODS: 1.12.0

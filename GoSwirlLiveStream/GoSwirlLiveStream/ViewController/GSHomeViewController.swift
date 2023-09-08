@@ -196,7 +196,9 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     func fetchCommentData(streamId: String) {
         
         guard let secondary = FirebaseApp.app(name: "goswirl")
-         else { assert(false, "Could not retrieve secondary app") }
+         else { print("Could not retrieve secondary app")
+            return
+        }
         
         let databaseCollectionForMessage = Firestore.firestore(app: secondary).collection("messages")
         databaseCollectionForMessage.document("NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI").collection("messages").order(by: "created_time")
@@ -408,7 +410,9 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         self.messageCount = self.messageCount + 1
         
         guard let secondary = FirebaseApp.app(name: "goswirl")
-         else { assert(false, "Could not retrieve secondary app") }
+         else { print("Could not retrieve secondary app")
+            return
+        }
         
         let databaseCollectionForMessage = Firestore.firestore(app: secondary).collection("messages")
         databaseCollectionForMessage.document(self.streamId).setData([

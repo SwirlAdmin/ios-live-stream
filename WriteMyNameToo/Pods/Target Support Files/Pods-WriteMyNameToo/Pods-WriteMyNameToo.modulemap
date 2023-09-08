@@ -1,6 +1,0 @@
-framework module Pods_WriteMyNameToo {
-  umbrella header "Pods-WriteMyNameToo-umbrella.h"
-
-  export *
-  module * { export * }
-}

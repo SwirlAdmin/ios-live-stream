@@ -136,6 +136,7 @@
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_fill" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-F1-at9">
                                                                 <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                                                <color key="tintColor" name="colorWhite"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz3-g4-XsR" customClass="MIBadgeButton" customModule="SwirlFramework" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -1829,6 +1830,11 @@
                             <constraint firstItem="Jkt-wb-JZb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="w4Q-qw-pig"/>
                             <constraint firstAttribute="trailing" secondItem="hcz-8a-Yjm" secondAttribute="trailing" id="xp6-kJ-g3f"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hcz-8a-Yjm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="SWIRL" id="KvB-ia-eZh"/>
                     <size key="freeformSize" width="375" height="700"/>

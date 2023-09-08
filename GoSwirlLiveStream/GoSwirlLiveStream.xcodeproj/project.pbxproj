@@ -7,12 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C807C3F92AAAE84700412A76 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807C3F82AAAE84700412A76 /* APIService.swift */; };
 		C86343242AA1C8DF0052E469 /* GoSwirlLiveStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C870657D2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */; };
+		C87065842AA5B27C0052E3A4 /* GSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065832AA5B27C0052E3A4 /* GSHomeViewController.swift */; };
+		C87065862AA5B8200052E3A4 /* GSRecordedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065852AA5B8200052E3A4 /* GSRecordedViewController.swift */; };
+		C87065882AA5B8500052E3A4 /* GSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87065872AA5B8500052E3A4 /* GSAssets.xcassets */; };
+		C87065902AA5E9C40052E3A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870658F2AA5E9C40052E3A4 /* SceneDelegate.swift */; };
+		C87065982AA5FA0F0052E3A4 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065912AA5FA0F0052E3A4 /* DesignableTextField.swift */; };
+		C87065992AA5FA0F0052E3A4 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065922AA5FA0F0052E3A4 /* DesignableLabel.swift */; };
+		C870659A2AA5FA0F0052E3A4 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065932AA5FA0F0052E3A4 /* DesignableImageView.swift */; };
+		C870659B2AA5FA0F0052E3A4 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065942AA5FA0F0052E3A4 /* DesignableView.swift */; };
+		C870659C2AA5FA0F0052E3A4 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065952AA5FA0F0052E3A4 /* DesignableButton.swift */; };
+		C870659D2AA5FA0F0052E3A4 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065962AA5FA0F0052E3A4 /* PlayPauseButton.swift */; };
+		C870659E2AA5FA0F0052E3A4 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065972AA5FA0F0052E3A4 /* DesignableTextView.swift */; };
+		C87065A32AA5FC270052E3A4 /* PreviousStreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870659F2AA5FC270052E3A4 /* PreviousStreamCollectionViewCell.swift */; };
+		C87065A42AA5FC270052E3A4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065A02AA5FC270052E3A4 /* CommentCell.swift */; };
+		C87065A52AA5FC270052E3A4 /* AttachProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065A12AA5FC270052E3A4 /* AttachProductTableViewCell.swift */; };
+		C87065A62AA5FC270052E3A4 /* LiveStreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065A22AA5FC270052E3A4 /* LiveStreamCollectionViewCell.swift */; };
+		C87065A82AA5FCBB0052E3A4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065A72AA5FCBB0052E3A4 /* Utils.swift */; };
+		C87065AA2AA5FD2A0052E3A4 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065A92AA5FD2A0052E3A4 /* MIBadgeButton.swift */; };
+		C8C098972AA75D8700D43217 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C098962AA75D8700D43217 /* Comment.swift */; };
+		C8C0989A2AA75FC700D43217 /* StreamProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C098982AA75FC700D43217 /* StreamProduct.swift */; };
+		C8C0989B2AA75FC700D43217 /* LiveStreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C098992AA75FC700D43217 /* LiveStreams.swift */; };
+		C8CA9E552AA881BE00D77B92 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E542AA881BE00D77B92 /* Products.swift */; };
+		C8CA9E5E2AA882A600D77B92 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E572AA882A600D77B92 /* UIView.swift */; };
+		C8CA9E5F2AA882A600D77B92 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E582AA882A600D77B92 /* UIColor.swift */; };
+		C8CA9E602AA882A600D77B92 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E592AA882A600D77B92 /* UITableView.swift */; };
+		C8CA9E612AA882A600D77B92 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5A2AA882A600D77B92 /* UIDevice.swift */; };
+		C8CA9E622AA882A600D77B92 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5B2AA882A600D77B92 /* UILabel.swift */; };
+		C8CA9E632AA882A600D77B92 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5C2AA882A600D77B92 /* UIApplication.swift */; };
+		C8CA9E642AA882A600D77B92 /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5D2AA882A600D77B92 /* StringFile.swift */; };
+		C8CA9E662AA8836A00D77B92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E652AA8836A00D77B92 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A68342493CDE40E4F0D9D7A /* Pods-GoSwirlLiveStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSwirlLiveStream.release.xcconfig"; path = "Target Support Files/Pods-GoSwirlLiveStream/Pods-GoSwirlLiveStream.release.xcconfig"; sourceTree = "<group>"; };
+		677159B932E00B2BB636A47C /* Pods-GoSwirlLiveStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSwirlLiveStream.debug.xcconfig"; path = "Target Support Files/Pods-GoSwirlLiveStream/Pods-GoSwirlLiveStream.debug.xcconfig"; sourceTree = "<group>"; };
+		C807C3F82AAAE84700412A76 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C86343202AA1C8DF0052E469 /* GoSwirlLiveStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSwirlLiveStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSwirlLiveStream.h; sourceTree = "<group>"; };
+		C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoSwirlStoryboard.storyboard; sourceTree = "<group>"; };
+		C87065832AA5B27C0052E3A4 /* GSHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSHomeViewController.swift; sourceTree = "<group>"; };
+		C87065852AA5B8200052E3A4 /* GSRecordedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSRecordedViewController.swift; sourceTree = "<group>"; };
+		C87065872AA5B8500052E3A4 /* GSAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GSAssets.xcassets; sourceTree = "<group>"; };
+		C870658F2AA5E9C40052E3A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../SwirlFramework/SwirlFramework/SceneDelegate.swift; sourceTree = "<group>"; };
+		C87065912AA5FA0F0052E3A4 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		C87065922AA5FA0F0052E3A4 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		C87065932AA5FA0F0052E3A4 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		C87065942AA5FA0F0052E3A4 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		C87065952AA5FA0F0052E3A4 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		C87065962AA5FA0F0052E3A4 /* PlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		C87065972AA5FA0F0052E3A4 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		C870659F2AA5FC270052E3A4 /* PreviousStreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousStreamCollectionViewCell.swift; sourceTree = "<group>"; };
+		C87065A02AA5FC270052E3A4 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		C87065A12AA5FC270052E3A4 /* AttachProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachProductTableViewCell.swift; sourceTree = "<group>"; };
+		C87065A22AA5FC270052E3A4 /* LiveStreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStreamCollectionViewCell.swift; sourceTree = "<group>"; };
+		C87065A72AA5FCBB0052E3A4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C87065A92AA5FD2A0052E3A4 /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
+		C8C098962AA75D8700D43217 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C8C098982AA75FC700D43217 /* StreamProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamProduct.swift; sourceTree = "<group>"; };
+		C8C098992AA75FC700D43217 /* LiveStreams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStreams.swift; sourceTree = "<group>"; };
+		C8CA9E542AA881BE00D77B92 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		C8CA9E572AA882A600D77B92 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C8CA9E582AA882A600D77B92 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C8CA9E592AA882A600D77B92 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		C8CA9E5A2AA882A600D77B92 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		C8CA9E5B2AA882A600D77B92 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		C8CA9E5C2AA882A600D77B92 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		C8CA9E5D2AA882A600D77B92 /* StringFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
+		C8CA9E652AA8836A00D77B92 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,11 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F3DA1DBBDCB8DDF4311A45F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C807C3F72AAAE81B00412A76 /* NetworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C807C3F82AAAE84700412A76 /* APIService.swift */,
+			);
+			path = NetworkAPI;
+			sourceTree = "<group>";
+		};
 		C86343162AA1C8DF0052E469 = {
 			isa = PBXGroup;
 			children = (
 				C86343222AA1C8DF0052E469 /* GoSwirlLiveStream */,
 				C86343212AA1C8DF0052E469 /* Products */,
+				FF4478C1DD6E894160CCA37D /* Pods */,
+				7F3DA1DBBDCB8DDF4311A45F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +126,105 @@
 		C86343222AA1C8DF0052E469 /* GoSwirlLiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				C870657E2AA5AE7F0052E3A4 /* ViewController */,
+				C87065802AA5AEB50052E3A4 /* Cells */,
+				C807C3F72AAAE81B00412A76 /* NetworkAPI */,
+				C8C098952AA75D6300D43217 /* Models */,
+				C870657F2AA5AE9D0052E3A4 /* CustomView */,
+				C87065812AA5AEBF0052E3A4 /* Tools */,
+				C8CA9E562AA882A600D77B92 /* Extension */,
+				C87065822AA5AF280052E3A4 /* IndicatorView */,
 				C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */,
+				C870658F2AA5E9C40052E3A4 /* SceneDelegate.swift */,
+				C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */,
+				C87065872AA5B8500052E3A4 /* GSAssets.xcassets */,
 			);
 			path = GoSwirlLiveStream;
+			sourceTree = "<group>";
+		};
+		C870657E2AA5AE7F0052E3A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C87065832AA5B27C0052E3A4 /* GSHomeViewController.swift */,
+				C87065852AA5B8200052E3A4 /* GSRecordedViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C870657F2AA5AE9D0052E3A4 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C87065A92AA5FD2A0052E3A4 /* MIBadgeButton.swift */,
+				C87065952AA5FA0F0052E3A4 /* DesignableButton.swift */,
+				C87065932AA5FA0F0052E3A4 /* DesignableImageView.swift */,
+				C87065922AA5FA0F0052E3A4 /* DesignableLabel.swift */,
+				C87065912AA5FA0F0052E3A4 /* DesignableTextField.swift */,
+				C87065972AA5FA0F0052E3A4 /* DesignableTextView.swift */,
+				C87065942AA5FA0F0052E3A4 /* DesignableView.swift */,
+				C87065962AA5FA0F0052E3A4 /* PlayPauseButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		C87065802AA5AEB50052E3A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C87065A12AA5FC270052E3A4 /* AttachProductTableViewCell.swift */,
+				C87065A02AA5FC270052E3A4 /* CommentCell.swift */,
+				C87065A22AA5FC270052E3A4 /* LiveStreamCollectionViewCell.swift */,
+				C870659F2AA5FC270052E3A4 /* PreviousStreamCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C87065812AA5AEBF0052E3A4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA9E652AA8836A00D77B92 /* Constants.swift */,
+				C87065A72AA5FCBB0052E3A4 /* Utils.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C87065822AA5AF280052E3A4 /* IndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IndicatorView;
+			sourceTree = "<group>";
+		};
+		C8C098952AA75D6300D43217 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA9E542AA881BE00D77B92 /* Products.swift */,
+				C8C098992AA75FC700D43217 /* LiveStreams.swift */,
+				C8C098982AA75FC700D43217 /* StreamProduct.swift */,
+				C8C098962AA75D8700D43217 /* Comment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C8CA9E562AA882A600D77B92 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA9E572AA882A600D77B92 /* UIView.swift */,
+				C8CA9E582AA882A600D77B92 /* UIColor.swift */,
+				C8CA9E592AA882A600D77B92 /* UITableView.swift */,
+				C8CA9E5A2AA882A600D77B92 /* UIDevice.swift */,
+				C8CA9E5B2AA882A600D77B92 /* UILabel.swift */,
+				C8CA9E5C2AA882A600D77B92 /* UIApplication.swift */,
+				C8CA9E5D2AA882A600D77B92 /* StringFile.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FF4478C1DD6E894160CCA37D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				677159B932E00B2BB636A47C /* Pods-GoSwirlLiveStream.debug.xcconfig */,
+				0A68342493CDE40E4F0D9D7A /* Pods-GoSwirlLiveStream.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C86343272AA1C8DF0052E469 /* Build configuration list for PBXNativeTarget "GoSwirlLiveStream" */;
 			buildPhases = (
+				8825928BD3B8B2BF080CCEF4 /* [CP] Check Pods Manifest.lock */,
 				C863431B2AA1C8DF0052E469 /* Headers */,
 				C863431C2AA1C8DF0052E469 /* Sources */,
 				C863431D2AA1C8DF0052E469 /* Frameworks */,
@@ -93,6 +271,7 @@
 				TargetAttributes = {
 					C863431F2AA1C8DF0052E469 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -119,16 +298,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87065882AA5B8500052E3A4 /* GSAssets.xcassets in Resources */,
+				C870657D2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8825928BD3B8B2BF080CCEF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoSwirlLiveStream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C863431C2AA1C8DF0052E469 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CA9E632AA882A600D77B92 /* UIApplication.swift in Sources */,
+				C87065A62AA5FC270052E3A4 /* LiveStreamCollectionViewCell.swift in Sources */,
+				C807C3F92AAAE84700412A76 /* APIService.swift in Sources */,
+				C87065992AA5FA0F0052E3A4 /* DesignableLabel.swift in Sources */,
+				C87065A32AA5FC270052E3A4 /* PreviousStreamCollectionViewCell.swift in Sources */,
+				C87065AA2AA5FD2A0052E3A4 /* MIBadgeButton.swift in Sources */,
+				C87065A52AA5FC270052E3A4 /* AttachProductTableViewCell.swift in Sources */,
+				C8CA9E622AA882A600D77B92 /* UILabel.swift in Sources */,
+				C8C0989A2AA75FC700D43217 /* StreamProduct.swift in Sources */,
+				C8C098972AA75D8700D43217 /* Comment.swift in Sources */,
+				C8CA9E612AA882A600D77B92 /* UIDevice.swift in Sources */,
+				C8CA9E5F2AA882A600D77B92 /* UIColor.swift in Sources */,
+				C8CA9E662AA8836A00D77B92 /* Constants.swift in Sources */,
+				C87065862AA5B8200052E3A4 /* GSRecordedViewController.swift in Sources */,
+				C87065A82AA5FCBB0052E3A4 /* Utils.swift in Sources */,
+				C87065842AA5B27C0052E3A4 /* GSHomeViewController.swift in Sources */,
+				C8CA9E5E2AA882A600D77B92 /* UIView.swift in Sources */,
+				C8C0989B2AA75FC700D43217 /* LiveStreams.swift in Sources */,
+				C870659C2AA5FA0F0052E3A4 /* DesignableButton.swift in Sources */,
+				C870659D2AA5FA0F0052E3A4 /* PlayPauseButton.swift in Sources */,
+				C87065902AA5E9C40052E3A4 /* SceneDelegate.swift in Sources */,
+				C870659B2AA5FA0F0052E3A4 /* DesignableView.swift in Sources */,
+				C870659E2AA5FA0F0052E3A4 /* DesignableTextView.swift in Sources */,
+				C8CA9E602AA882A600D77B92 /* UITableView.swift in Sources */,
+				C870659A2AA5FA0F0052E3A4 /* DesignableImageView.swift in Sources */,
+				C8CA9E642AA882A600D77B92 /* StringFile.swift in Sources */,
+				C8CA9E552AA881BE00D77B92 /* Products.swift in Sources */,
+				C87065982AA5FA0F0052E3A4 /* DesignableTextField.swift in Sources */,
+				C87065A42AA5FC270052E3A4 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +492,9 @@
 		};
 		C86343282AA1C8DF0052E469 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 677159B932E00B2BB636A47C /* Pods-GoSwirlLiveStream.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -277,10 +514,11 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Swirl.GoSwirlLiveStream;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Swirl.GoSwirlLiveStream;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,7 +526,9 @@
 		};
 		C86343292AA1C8DF0052E469 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A68342493CDE40E4F0D9D7A /* Pods-GoSwirlLiveStream.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -308,7 +548,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Swirl.GoSwirlLiveStream;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Swirl.GoSwirlLiveStream;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

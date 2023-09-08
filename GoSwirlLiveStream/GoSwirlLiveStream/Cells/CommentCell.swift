@@ -30,7 +30,7 @@ class CommentCell: UITableViewCell {
         
         self.setLabelView()
         self.viewLblMessage.alpha = 1
-        if userId == Constants.getUserBrandId() {
+        if userId == GSConstants.getUserBrandId() {
             self.viewLblMessage.backgroundColor = UIColor.init(hex: "#000000")
             self.lblMessage.textColor = UIColor.white
         } else {
@@ -47,7 +47,7 @@ class CommentCell: UITableViewCell {
         
         self.setLabelView()
         self.viewLblMessage.alpha = 1
-        if userId == Constants.getUserBrandId() {
+        if userId == GSConstants.getUserBrandId() {
             self.viewLblMessage.backgroundColor = UIColor.init(hex: "#000000")
         } else {
             self.viewLblMessage.backgroundColor = UIColor.init(hex: "#E7E7E7")

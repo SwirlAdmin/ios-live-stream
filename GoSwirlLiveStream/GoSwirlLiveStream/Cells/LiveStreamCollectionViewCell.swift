@@ -58,8 +58,8 @@ class LiveStreamCollectionViewCell: UICollectionViewCell {
     
     func updateCellConstraints() {
         
-        let cellWidth = CGFloat(Constants.deviceWidth / 2.8)
-        let cellHeight = CGFloat(Constants.deviceWidth / 1.72) - 40
+        let cellWidth = CGFloat(GSConstants.deviceWidth / 2.8)
+        let cellHeight = CGFloat(GSConstants.deviceWidth / 1.72) - 40
         self.csImgViewHeight.constant = cellHeight
         self.csImgViewWidth.constant = cellWidth
     }

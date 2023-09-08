@@ -56,22 +56,22 @@ class AttachProductTableViewCell: UITableViewCell {
                 let intDiscountPrice = Int(discountPrice) ?? 0
                 if intDiscountPrice < intPrice {
                     self.lblProductDiscountPrice.isHidden = false
-                    let originalPrice = Constants.getUserCurrency() + "" + price
+                    let originalPrice = GSConstants.getUserCurrency() + "" + price
                     let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: originalPrice)
                         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
                     self.lblProductDiscountPrice.attributedText = attributeString
-                    self.lblProductPrice.text = Constants.getUserCurrency() + "" + discountPrice
+                    self.lblProductPrice.text = GSConstants.getUserCurrency() + "" + discountPrice
                 } else {
                     self.lblProductDiscountPrice.isHidden = true
-                    self.lblProductPrice.text = Constants.getUserCurrency() + "" + price
+                    self.lblProductPrice.text = GSConstants.getUserCurrency() + "" + price
                 }
             } else {
                 self.lblProductDiscountPrice.isHidden = true
-                self.lblProductPrice.text = Constants.getUserCurrency() + "" + price
+                self.lblProductPrice.text = GSConstants.getUserCurrency() + "" + price
             }
         } else {
             self.lblProductDiscountPrice.isHidden = true
-            self.lblProductPrice.text = Constants.getUserCurrency() + " 0"
+            self.lblProductPrice.text = GSConstants.getUserCurrency() + " 0"
         }
         
 //        if self.objectOfStreamProduct?.product_price != nil {

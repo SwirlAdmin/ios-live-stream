@@ -38,7 +38,7 @@
 		C8CA9E622AA882A600D77B92 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5B2AA882A600D77B92 /* UILabel.swift */; };
 		C8CA9E632AA882A600D77B92 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5C2AA882A600D77B92 /* UIApplication.swift */; };
 		C8CA9E642AA882A600D77B92 /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E5D2AA882A600D77B92 /* StringFile.swift */; };
-		C8CA9E662AA8836A00D77B92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E652AA8836A00D77B92 /* Constants.swift */; };
+		C8CA9E662AA8836A00D77B92 /* GSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA9E652AA8836A00D77B92 /* GSConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +76,7 @@
 		C8CA9E5B2AA882A600D77B92 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		C8CA9E5C2AA882A600D77B92 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		C8CA9E5D2AA882A600D77B92 /* StringFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
-		C8CA9E652AA8836A00D77B92 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8CA9E652AA8836A00D77B92 /* GSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 		C87065812AA5AEBF0052E3A4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C8CA9E652AA8836A00D77B92 /* Constants.swift */,
+				C8CA9E652AA8836A00D77B92 /* GSConstants.swift */,
 				C87065A72AA5FCBB0052E3A4 /* Utils.swift */,
 			);
 			path = Tools;
@@ -347,7 +347,7 @@
 				C8C098972AA75D8700D43217 /* Comment.swift in Sources */,
 				C8CA9E612AA882A600D77B92 /* UIDevice.swift in Sources */,
 				C8CA9E5F2AA882A600D77B92 /* UIColor.swift in Sources */,
-				C8CA9E662AA8836A00D77B92 /* Constants.swift in Sources */,
+				C8CA9E662AA8836A00D77B92 /* GSConstants.swift in Sources */,
 				C87065862AA5B8200052E3A4 /* GSRecordedViewController.swift in Sources */,
 				C87065A82AA5FCBB0052E3A4 /* Utils.swift in Sources */,
 				C87065842AA5B27C0052E3A4 /* GSHomeViewController.swift in Sources */,

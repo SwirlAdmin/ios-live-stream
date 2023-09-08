@@ -19,7 +19,7 @@ enum FontType {
     case Bold
 }
 
-class Constants {
+class GSConstants {
     
     //public static let logo_url = "https://ams3.digitaloceanspaces.com/gn-static01/assets/new_homepage/app/GetNatty_InStore_designer.png"
     public static let white_logo = "https://ams3.digitaloceanspaces.com/gn-static01/assets/new_homepage/images/Logo-white.png"

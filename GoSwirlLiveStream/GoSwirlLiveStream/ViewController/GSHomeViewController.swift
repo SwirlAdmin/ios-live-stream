@@ -306,11 +306,11 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         
         self.collectionViewLiveStream.delegate = self
         self.collectionViewLiveStream.dataSource = self
-        self.csCVLiveStream.constant = CGFloat(Constants.deviceWidth / 1.72) + 1
+        self.csCVLiveStream.constant = CGFloat(GSConstants.deviceWidth / 1.72) + 1
         
         self.collectionViewPrevious.delegate = self
         self.collectionViewPrevious.dataSource = self
-        self.csCVPreviousHeight.constant = CGFloat(Constants.deviceWidth / 1.72) + 1
+        self.csCVPreviousHeight.constant = CGFloat(GSConstants.deviceWidth / 1.72) + 1
     }
     
     func setUpTableView() {
@@ -347,7 +347,7 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     func playVideo(videoUrl: String) {
         
         let videoUrl = "https://stream.mux.com/wborxF8TMUGI1YinQKjar202rl0000YEpUzeJAlaV1SORI/high.mp4"
-        Constants.setDisplayVideoStatus(true)
+        GSConstants.setDisplayVideoStatus(true)
         let videoURL = NSURL(string: videoUrl)
         player = AVPlayer(url: videoURL! as URL)
         self.playerController.player = player
@@ -417,7 +417,7 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         
         let currntTime = Int(NSDate().timeIntervalSince1970 * 1000)
         databaseCollectionForMessage.document(self.streamId).collection("messages").addDocument(data: [
-            "from": Constants.getUserName(),
+            "from": GSConstants.getUserName(),
             "message": message,
             "type": "text",
             "created_time":currntTime,
@@ -429,7 +429,7 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
             "is_designer_seen": true,
             "is_user_seen": true,
             "cover_img": "",
-            "title": Constants.liveNowTitle,
+            "title": GSConstants.liveNowTitle,
             "index": self.messageCount
         ])
         self.tfSendMessage.text = nil
@@ -482,7 +482,7 @@ extension GSHomeViewController : UITableViewDelegate, UITableViewDataSource {
             var tempAttrs: [NSAttributedString.Key : AnyObject] = [:]
             var tempAttr: [NSAttributedString.Key : AnyObject] = [:]
             
-            if commentFrom == Constants.getUserBrandId() {
+            if commentFrom == GSConstants.getUserBrandId() {
                 tempAttrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15), NSAttributedString.Key.foregroundColor : UIColor.white]
                 tempAttr = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15), NSAttributedString.Key.foregroundColor : UIColor.init(hex: "#9C8CFF")]
             } else {
@@ -559,8 +559,8 @@ extension GSHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = CGFloat(Constants.deviceWidth / 2.8)
-        let cellHieght = CGFloat(Constants.deviceWidth / 1.72)
+        let cellWidth = CGFloat(GSConstants.deviceWidth / 2.8)
+        let cellHieght = CGFloat(GSConstants.deviceWidth / 1.72)
         return CGSize.init(width: cellWidth, height: cellHieght)
     }
 }

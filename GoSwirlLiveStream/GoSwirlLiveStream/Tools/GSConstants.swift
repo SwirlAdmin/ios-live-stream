@@ -34,8 +34,8 @@ class GSConstants {
     public static let ivs_endpoint_url = "rtmps://f956bcbdef39.global-contribute.live-video.net:443/app/"
     public static let ant_media_player = "http://68.183.80.179:5080/LiveApp/streams/"
     
-    public static let web_url = "https://bigleap.live/index.php"//"https://livevideoshopping.in/index.php" //"https://goswirl.in/index.php"
-    //public static let web_url = "https://store.goswirl.live/index.php" //"https://www.getnatty.com"
+    //public static let web_url = "https://bigleap.live/index.php"//"https://livevideoshopping.in/index.php" //"https://goswirl.in/index.php"
+    public static let web_url = "https://store.goswirl.live/index.php" //"https://www.getnatty.com"
     
     public static let live_schedule_stream = "/api/Sdkcon/streamListing"
     public static let product_list = "/api/Sdkcon/product_listing"

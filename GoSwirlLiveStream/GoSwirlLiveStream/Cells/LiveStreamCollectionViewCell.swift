@@ -41,7 +41,7 @@ class LiveStreamCollectionViewCell: UICollectionViewCell {
         
         self.imgViewThumbnail.loadImage(imageUrl: self.objectOfLiveStream?.cover_img, placeHolder: "ph_swirl", isCache: true, contentMode: .scaleAspectFill)
         
-        if self.objectOfLiveStream?.is_live == true {
+        if self.objectOfLiveStream?.is_Live == true {
             self.viewLiveLabel.backgroundColor = UIColor(hex: "#EE3445")
             self.lblLiveStatus.text = "Live"
         } else {

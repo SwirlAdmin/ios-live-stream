@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C807C3F92AAAE84700412A76 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807C3F82AAAE84700412A76 /* APIService.swift */; };
+		C80F5B7D2AB5D3A000907492 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C80F5B762AB5D3A000907492 /* LICENSE */; };
+		C80F5B7E2AB5D3A000907492 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F5B792AB5D3A000907492 /* Helpers.swift */; };
+		C80F5B7F2AB5D3A000907492 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F5B7A2AB5D3A000907492 /* HeartView.swift */; };
+		C80F5B802AB5D3A000907492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80F5B7B2AB5D3A000907492 /* Assets.xcassets */; };
+		C80F5B812AB5D3A000907492 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C80F5B7C2AB5D3A000907492 /* README.md */; };
 		C86343242AA1C8DF0052E469 /* GoSwirlLiveStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C870657D2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */; };
 		C87065842AA5B27C0052E3A4 /* GSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87065832AA5B27C0052E3A4 /* GSHomeViewController.swift */; };
@@ -45,6 +50,11 @@
 		0A68342493CDE40E4F0D9D7A /* Pods-GoSwirlLiveStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSwirlLiveStream.release.xcconfig"; path = "Target Support Files/Pods-GoSwirlLiveStream/Pods-GoSwirlLiveStream.release.xcconfig"; sourceTree = "<group>"; };
 		677159B932E00B2BB636A47C /* Pods-GoSwirlLiveStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSwirlLiveStream.debug.xcconfig"; path = "Target Support Files/Pods-GoSwirlLiveStream/Pods-GoSwirlLiveStream.debug.xcconfig"; sourceTree = "<group>"; };
 		C807C3F82AAAE84700412A76 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C80F5B762AB5D3A000907492 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C80F5B792AB5D3A000907492 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C80F5B7A2AB5D3A000907492 /* HeartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		C80F5B7B2AB5D3A000907492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C80F5B7C2AB5D3A000907492 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C86343202AA1C8DF0052E469 /* GoSwirlLiveStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSwirlLiveStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSwirlLiveStream.h; sourceTree = "<group>"; };
 		C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoSwirlStoryboard.storyboard; sourceTree = "<group>"; };
@@ -105,6 +115,35 @@
 			path = NetworkAPI;
 			sourceTree = "<group>";
 		};
+		C80F5B752AB5D3A000907492 /* FloatingHearts */ = {
+			isa = PBXGroup;
+			children = (
+				C80F5B762AB5D3A000907492 /* LICENSE */,
+				C80F5B772AB5D3A000907492 /* FloatingHearts */,
+				C80F5B7C2AB5D3A000907492 /* README.md */,
+			);
+			name = FloatingHearts;
+			path = GoSwirlLiveStream/FloatingHearts;
+			sourceTree = SOURCE_ROOT;
+		};
+		C80F5B772AB5D3A000907492 /* FloatingHearts */ = {
+			isa = PBXGroup;
+			children = (
+				C80F5B782AB5D3A000907492 /* Classes */,
+				C80F5B7B2AB5D3A000907492 /* Assets.xcassets */,
+			);
+			path = FloatingHearts;
+			sourceTree = "<group>";
+		};
+		C80F5B782AB5D3A000907492 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C80F5B792AB5D3A000907492 /* Helpers.swift */,
+				C80F5B7A2AB5D3A000907492 /* HeartView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C86343162AA1C8DF0052E469 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +173,7 @@
 				C87065812AA5AEBF0052E3A4 /* Tools */,
 				C8CA9E562AA882A600D77B92 /* Extension */,
 				C87065822AA5AF280052E3A4 /* IndicatorView */,
+				C80F5B752AB5D3A000907492 /* FloatingHearts */,
 				C86343232AA1C8DF0052E469 /* GoSwirlLiveStream.h */,
 				C870658F2AA5E9C40052E3A4 /* SceneDelegate.swift */,
 				C870657C2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard */,
@@ -298,7 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80F5B7D2AB5D3A000907492 /* LICENSE in Resources */,
 				C87065882AA5B8500052E3A4 /* GSAssets.xcassets in Resources */,
+				C80F5B812AB5D3A000907492 /* README.md in Resources */,
+				C80F5B802AB5D3A000907492 /* Assets.xcassets in Resources */,
 				C870657D2AA5ADCF0052E3A4 /* GoSwirlStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,10 +391,12 @@
 				C8CA9E612AA882A600D77B92 /* UIDevice.swift in Sources */,
 				C8CA9E5F2AA882A600D77B92 /* UIColor.swift in Sources */,
 				C8CA9E662AA8836A00D77B92 /* GSConstants.swift in Sources */,
+				C80F5B7E2AB5D3A000907492 /* Helpers.swift in Sources */,
 				C87065862AA5B8200052E3A4 /* GSRecordedViewController.swift in Sources */,
 				C87065A82AA5FCBB0052E3A4 /* Utils.swift in Sources */,
 				C87065842AA5B27C0052E3A4 /* GSHomeViewController.swift in Sources */,
 				C8CA9E5E2AA882A600D77B92 /* UIView.swift in Sources */,
+				C80F5B7F2AB5D3A000907492 /* HeartView.swift in Sources */,
 				C8C0989B2AA75FC700D43217 /* LiveStreams.swift in Sources */,
 				C870659C2AA5FA0F0052E3A4 /* DesignableButton.swift in Sources */,
 				C870659D2AA5FA0F0052E3A4 /* PlayPauseButton.swift in Sources */,
@@ -506,6 +551,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,6 +586,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

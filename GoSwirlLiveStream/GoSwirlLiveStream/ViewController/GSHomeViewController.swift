@@ -67,6 +67,7 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var viewSendMsgTF: DesignableView!
     @IBOutlet weak var btnSendMessage: DesignableButton!
     @IBOutlet weak var tfSendMessage: DesignableTextField!
+    @IBOutlet weak var viewFloatingHeart: UIView!
     
     @IBOutlet weak var csStackButtonBottom: NSLayoutConstraint!
     @IBOutlet weak var csCVLiveStream: NSLayoutConstraint!//215
@@ -79,19 +80,83 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     var arrayOfCompletedLiveStream = [LiveStreams].init()
     
     var arrayOfProducts = [Products].init()
-    var objectOfLiveStream: LiveStreamsData? = nil
+    var objectOfLiveStreamData: LiveStreamsData? = nil
     
     var tempUrl: String = ""
     var messageCount: Int = 0
-    var streamId: String = "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI"
+    
     
     let playerController = AVPlayerViewController()
     var player: AVPlayer?
+    var objectOfLiveStreams: LiveStreams?
+    var urlString: String = ""
+    var streamId: String = "NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI"
+    public var navigationBarColor: String = "#613FC0"
+    
+    private struct HeartAttributes {
+        static let heartSize: CGFloat = 36
+        static let heartSizew: CGFloat = 30
+        static let burstDelay = 0.1
+    }
+    
+    var burstTimer: Timer?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setUpView()
+        //self.setNavigationTitle(title: "Back")
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.setUpNavigation(animated: animated)
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func setUpNavigation(animated: Bool) {
+        
+        if #available(iOS 15, *) {
+                
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(hex: self.navigationBarColor)
+                
+            let titleAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
+                appearance.titleTextAttributes = titleAttribute
+                
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            navigationController?.navigationBar.tintColor = UIColor.white
+            //self.navigationController?.navigationBar.topItem?.title = "Live Stream"
+            
+        } else {
+            
+            self.navigationController?.setNavigationBarHidden(false, animated: animated)
+            self.navigationController?.navigationBar.barTintColor = UIColor.red
+            UINavigationBar.appearance().barTintColor = UIColor.red
+        }
+    }
+    
+    func setNavigationTitle(title: String) {
+        
+        print("From setNavigationTitle ...")
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: title, style: .plain, target: nil, action: #selector(self.goBack))
+    }
+    
+    @objc func goBack() {
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func setUpView() {
@@ -117,13 +182,13 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         self.viewLiveChat.isHidden = true
         self.viewAskQuestionList.isHidden = true
         
-        self.fetchCommentData(streamId: "")
+        self.hideShowListingView(hide: false)
     }
     
     func fetchLiveStreamData() {
         
-        let params = ["designer_id" : "19791"]
-        guard let serviceUrl = URL(string: "https://api.goswirl.live/index.php/api/Designer/streamlisting") else { return }
+        let params = ["brand_id" : "19791"]
+        guard let serviceUrl = URL(string: "https://store.goswirl.live/index.php/api/Sdkcon/streamListing") else { return }
         ApiService.callPost(url: serviceUrl, params: params, finish: getLiveStreamData)
     }
     
@@ -142,19 +207,51 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         do {
             
             let dic = try JSONSerialization.jsonObject(with: Data(jsonString.utf8)) as! NSDictionary
-            //print("From dic : ", dic["data"] as! Array<Any>)
-            let jsonArray = dic["data"] as! Array<Any>
-                
-            self.objectOfLiveStream = LiveStreamsData(jsonData: jsonArray as NSArray)
-            //print("From objectOfLiveStream : ", self.objectOfLiveStream as Any)
+            let dicData = dic["data"] as! NSDictionary
             
-            let temp = self.objectOfLiveStream?.arrayOfLiveStreams ?? []
+            let arrayOfLiveStream = dicData["live"] as! Array<Any>
+            self.objectOfLiveStreamData = LiveStreamsData(jsonData: arrayOfLiveStream as NSArray)
+            
+            let temp = self.objectOfLiveStreamData?.arrayOfLiveStreams ?? []
             self.arrayOfLiveStream = temp
+            
+            for singleObject in self.arrayOfLiveStream {
+                print("From Object : ", singleObject.stream_id as Any)
+            }
+            
+            let arrayOfComLiveStream = dicData["completed"] as! Array<Any>
+            self.objectOfLiveStreamData = LiveStreamsData(jsonData: arrayOfComLiveStream as NSArray)
+            
+            let tempCom = self.objectOfLiveStreamData?.arrayOfLiveStreams ?? []
+            self.arrayOfCompletedLiveStream = tempCom
+            
             if self.arrayOfLiveStream.count > 0 {
                 DispatchQueue.main.async {
                     self.collectionViewLiveStream.reloadData()
                 }
             }
+            
+            if self.arrayOfCompletedLiveStream.count > 0 {
+                DispatchQueue.main.async {
+                    self.collectionViewPrevious.reloadData()
+                }
+            }
+        
+            //print("From arrayOfLiveStream : ", arrayOfLiveStream)
+            
+            //print("From dic : ", dic["data"] as! Array<Any>)
+//            let jsonArray = dic["data"] as! Array<Any>
+//
+//            self.objectOfLiveStream = LiveStreamsData(jsonData: jsonArray as NSArray)
+//            //print("From objectOfLiveStream : ", self.objectOfLiveStream as Any)
+//
+//            let temp = self.objectOfLiveStream?.arrayOfLiveStreams ?? []
+//            self.arrayOfLiveStream = temp
+//            if self.arrayOfLiveStream.count > 0 {
+//                DispatchQueue.main.async {
+//                    self.collectionViewLiveStream.reloadData()
+//                }
+//            }
         }
         catch {
             print(error)
@@ -201,7 +298,7 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         }
         
         let databaseCollectionForMessage = Firestore.firestore(app: secondary).collection("messages")
-        databaseCollectionForMessage.document("NU3ExjLUyecS8PAbwDw9f2nqaBX02iXC3XjCrWtQN2XI").collection("messages").order(by: "created_time")
+        databaseCollectionForMessage.document(streamId).collection("messages").order(by: "created_time")
         .addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
@@ -346,9 +443,48 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         return result
     }
     
+    func showVideoView() {
+        
+        self.playVideo(videoUrl: self.urlString)
+    }
+    
+    func setLiveStatusView(status: String) {
+        
+        if status == "Live" {
+            self.viewLiveStatus.backgroundColor = UIColor.systemRed
+            self.lblLiveStatus.text = "LIVE"
+        } else {
+            self.viewLiveStatus.backgroundColor = UIColor(named: "colorGrayDark")
+            self.lblLiveStatus.text = "RECORDED"
+        }
+    }
+    
+    func hideShowListingView(hide: Bool) {
+        
+        if hide {
+            DispatchQueue.main.async {
+                self.viewLiveStreamListing.isHidden = true
+                self.viewMainVideo.isHidden = false
+                self.viewStreamVideo.isHidden = false
+                self.navigationController?.navigationBar.isHidden = true
+                self.navigationController?.navigationBar.isTranslucent = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.viewMainVideo.isHidden = true
+                self.viewStreamVideo.isHidden = true
+                self.navigationController?.navigationBar.isHidden = false
+                self.navigationController?.navigationBar.isTranslucent = false
+                self.collectionViewLiveStream.reloadData()
+                self.viewLiveStreamListing.layoutIfNeeded()
+                self.viewLiveStreamListing.layoutSubviews()
+                self.viewLiveStreamListing.isHidden = false
+            }
+        }
+    }
+    
     func playVideo(videoUrl: String) {
         
-        let videoUrl = "https://stream.mux.com/wborxF8TMUGI1YinQKjar202rl0000YEpUzeJAlaV1SORI/high.mp4"
         GSConstants.setDisplayVideoStatus(true)
         let videoURL = NSURL(string: videoUrl)
         player = AVPlayer(url: videoURL! as URL)
@@ -358,6 +494,24 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
         playerController.view.frame = self.viewStreamVideo.frame //self.viewMainVideo.frame
         self.viewStreamVideo.addSubview(playerController.view)
         player?.play()
+    }
+    
+    func removeVideoPlayer() {
+        
+        if self.player != nil {
+            DispatchQueue.main.async {
+                self.player?.replaceCurrentItem(with: nil)
+                self.player?.rate = 0
+                self.player?.volume = 0
+                self.playerController.player = nil
+            }
+        }
+    }
+    
+    func clearComment() {
+        
+        self.comments = []
+        self.arrayOfTempComment = []
     }
     
     @IBAction func tapFunction(sender: UITapGestureRecognizer) {
@@ -398,6 +552,31 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     
     @IBAction func btnLike(_ sender: UIButton) {
         
+        self.flowHeart()
+    }
+    
+    func flowHeart() {
+        
+        print("From flowHeart ...")
+        burstTimer = Timer.scheduledTimer(timeInterval: HeartAttributes.burstDelay, target: self, selector: #selector(showTheLove), userInfo: nil, repeats: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            self.burstTimer?.invalidate()
+        }
+    }
+    
+    @objc
+    func showTheLove(gesture: UITapGestureRecognizer?) {
+        
+        print("From showTheLove ...")
+        //let heart = HeartView(frame: CGRect(x:0, y:0, width:HeartAttributes.heartSize, height:HeartAttributes.heartSize))
+        let heart = HeartView(frame: CGRect(x:0, y:0, width:HeartAttributes.heartSizew, height:HeartAttributes.heartSize))
+        viewFloatingHeart.addSubview(heart)
+        let fountainX = viewFloatingHeart.frame.width / 2
+        //let fountainY = viewHeart.bounds.height - HeartAttributes.heartSize / 2.0 - 5
+        let fountainY = viewFloatingHeart.frame.height
+        heart.center = CGPoint(x: fountainX, y: fountainY)
+        heart.animateInView(viewFloatingHeart)
     }
     
     @IBAction func btnSendMsg(_ sender: UIButton) {
@@ -450,7 +629,10 @@ public class GSHomeViewController: UIViewController , UITextFieldDelegate {
     
     @IBAction func btnCloseLiveStream(_ sender: UIButton) {
         
-        self.dismiss(animated: true)
+        self.removeVideoPlayer()
+        self.clearComment()
+        self.tableViewLiveChat.reloadData()
+        self.hideShowListingView(hide: false)
     }
 }
 
@@ -528,35 +710,35 @@ extension GSHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
 //        print("From numberOfItemsInSection : ", self.arrayOfLiveStream.count)
-//        if collectionView == self.collectionViewLiveStream {
-//            return self.arrayOfLiveStream.count
-//        } else if collectionView == self.collectionViewPrevious {
-//            return self.arrayOfCompletedLiveStream.count
-//        } else {
-//            return 5
-//        }
-        return 5
+        if collectionView == self.collectionViewLiveStream {
+            return self.arrayOfLiveStream.count
+        } else if collectionView == self.collectionViewPrevious {
+            return self.arrayOfCompletedLiveStream.count
+        } else {
+            return 0
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        print("From cellForItemAt ")
         if collectionView == self.collectionViewLiveStream {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiveStreamCollectionViewCell", for: indexPath) as! LiveStreamCollectionViewCell
             cell.tag = indexPath.row
             cell.delegate = self
             cell.btnSelectCell.tag = indexPath.row
             cell.btnShareLink.tag = indexPath.row
-            //cell.objectOfLiveStream = self.arrayOfLiveStream[indexPath.row]
-            //cell.configCell()
+            //cell.updateCellConstraints()
+            cell.objectOfLiveStream = self.arrayOfLiveStream[indexPath.row]
+            cell.configCell()
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreviousStreamCollectionViewCell", for: indexPath) as! PreviousStreamCollectionViewCell
             cell.delegate = self
             cell.btnSelectCell.tag = indexPath.row
             cell.btnShareLink.tag = indexPath.row
-            //cell.objectOfLiveStream = self.arrayOfCompletedLiveStream[indexPath.row]
-            //cell.configCell()
+            //cell.updateCellConstraints()
+            cell.objectOfLiveStream = self.arrayOfCompletedLiveStream[indexPath.row]
+            cell.configCell()
             return cell
         }
     }
@@ -573,14 +755,30 @@ extension GSHomeViewController: PreviousCCDelegate {
     
     func btnSelectPreviousCell(index: Int) {
         
-        self.viewLiveStreamListing.isHidden = true
-        self.playVideo(videoUrl: "")
+        let objectOfLiveStream = self.arrayOfCompletedLiveStream[index]
+        self.objectOfLiveStreams = objectOfLiveStream
+        
+        let tempURLString = objectOfLiveStream.recording_url ?? ""
+        let tempStreamId = objectOfLiveStream.stream_id ?? ""
+        
+        if tempStreamId != "" {
+            self.streamId = tempStreamId
+            self.fetchCommentData(streamId: self.streamId)
+        }
+        
+        if tempURLString != "" {
+            //print("From liveStreamSelected 3")
+            self.urlString = tempURLString
+        }
+        
+        self.hideShowListingView(hide: true)
+        self.showVideoView()
+        self.setLiveStatusView(status: "Recorded")
     }
     
     func btnSelectShareLink(index: Int) {
         
-        self.viewLiveStreamListing.isHidden = true
-        self.playVideo(videoUrl: "")
+        
     }
 }
 
@@ -588,6 +786,25 @@ extension GSHomeViewController: LiveStreamCCDelegate {
     
     func btnSelectCell(index: Int) {
         
+        let objectOfLiveStream = self.arrayOfLiveStream[index]
+        self.objectOfLiveStreams = objectOfLiveStream
+        
+        let tempURLString = objectOfLiveStream.recording_url ?? ""
+        let tempStreamId = objectOfLiveStream.stream_id ?? ""
+        
+        if tempStreamId != "" {
+            self.streamId = tempStreamId
+            self.fetchCommentData(streamId: self.streamId)
+        }
+        
+        if tempURLString != "" {
+            //print("From liveStreamSelected 3")
+            self.urlString = tempURLString
+        }
+        
+        self.hideShowListingView(hide: true)
+        self.showVideoView()
+        self.setLiveStatusView(status: "Live")
     }
     
     func btnShareLink(index: Int) {

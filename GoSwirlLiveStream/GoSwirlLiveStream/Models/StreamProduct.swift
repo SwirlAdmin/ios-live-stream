@@ -1,7 +1,22 @@
 import Foundation
 
+struct StreamProductData {
+    
+    var arrayOfProducts: [StreamProduct] = []
+}
 
-struct StreamProduct : Hashable {
+extension StreamProductData {
+    
+    init(jsonData: NSArray) {
+        
+        for singleDict in jsonData {
+            let singleDict = StreamProduct(jsonDataDict: singleDict as! NSDictionary)
+            self.arrayOfProducts.append(singleDict)
+        }
+    }
+}
+
+struct StreamProduct {
     
 	var product_id : String?
     var product_name : String?
@@ -11,6 +26,7 @@ struct StreamProduct : Hashable {
     var product_sell_price : String?
     var product_img_url: String?
     var product_slug_url : String?
+    var product_url : String?
     var external_links : String?
     var product_desc : String?
 	var images : String?
@@ -26,6 +42,7 @@ struct StreamProduct : Hashable {
         self.product_sell_price = ""
         self.product_img_url = ""
         self.product_slug_url = ""
+        self.product_url = ""
         self.external_links = ""
         self.product_desc = ""
         self.images = ""
@@ -42,6 +59,7 @@ struct StreamProduct : Hashable {
         self.product_sell_price = ""
         self.product_img_url = ""
         self.product_slug_url = ""
+        self.product_url = ""
         self.external_links = ""
         self.product_desc = ""
         self.images = ""
@@ -51,13 +69,14 @@ struct StreamProduct : Hashable {
         self.product_name = (jsonDataDict.object(forKey: "product_name") as? String) ?? ""
         self.product_user = (jsonDataDict.object(forKey: "product_user") as? String) ?? ""
         self.product_title = (jsonDataDict.object(forKey: "product_title") as? String) ?? ""
-        self.product_price = (jsonDataDict.object(forKey: "product_id") as? String) ?? ""
-        self.product_sell_price = (jsonDataDict.object(forKey: "product_name") as? String) ?? ""
-        self.product_img_url = (jsonDataDict.object(forKey: "product_user") as? String) ?? ""
-        self.product_slug_url = (jsonDataDict.object(forKey: "product_title") as? String) ?? ""
-        self.external_links = (jsonDataDict.object(forKey: "product_id") as? String) ?? ""
-        self.product_desc = (jsonDataDict.object(forKey: "product_name") as? String) ?? ""
-        self.images = (jsonDataDict.object(forKey: "product_user") as? String) ?? ""
-        self.subdomain = (jsonDataDict.object(forKey: "product_title") as? String) ?? ""
+        self.product_price = (jsonDataDict.object(forKey: "product_price") as? String) ?? ""
+        self.product_sell_price = (jsonDataDict.object(forKey: "product_sell_price") as? String) ?? ""
+        self.product_img_url = (jsonDataDict.object(forKey: "product_img_url") as? String) ?? ""
+        self.product_slug_url = (jsonDataDict.object(forKey: "product_slug_url") as? String) ?? ""
+        self.product_url = (jsonDataDict.object(forKey: "product_url") as? String) ?? ""
+        self.external_links = (jsonDataDict.object(forKey: "external_links") as? String) ?? ""
+        self.product_desc = (jsonDataDict.object(forKey: "product_desc") as? String) ?? ""
+        self.images = (jsonDataDict.object(forKey: "images") as? String) ?? ""
+        self.subdomain = (jsonDataDict.object(forKey: "subdomain") as? String) ?? ""
     }
 }

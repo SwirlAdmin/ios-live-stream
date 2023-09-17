@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Live-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="GSHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GSHomeViewController" customModule="GoSwirlLiveStream" customModuleProvider="target" sceneMemberID="viewController">
@@ -1009,37 +1010,13 @@
                                             <constraint firstItem="YIq-j2-Wuj" firstAttribute="top" secondItem="EIa-Qg-FFL" secondAttribute="top" id="yJA-Vw-B2W"/>
                                         </constraints>
                                     </view>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPX-iQ-IEh" customClass="Floater" customModule="GoSwirlLiveStream" customModuleProvider="target">
-                                        <rect key="frame" x="303" y="481" width="100" height="300"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPX-iQ-IEh">
+                                        <rect key="frame" x="313" y="602" width="100" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="UiA-Dt-lsl"/>
+                                            <constraint firstAttribute="height" constant="200" id="UiA-Dt-lsl"/>
                                             <constraint firstAttribute="width" constant="100" id="sQR-2a-uSd"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationSpeed">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="density">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="speedY">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="speedX">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="floaterImage1" value="heart_fill"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="floaterImage2" value="smiley_heart"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="floaterImage3" value="heart_fill_outline"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="floaterImage4" value="smiley_sunglass"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="floatieWidth">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="floatieHeight">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1061,7 +1038,7 @@
                                     <constraint firstItem="cAu-oN-0Nw" firstAttribute="top" secondItem="mel-n6-P80" secondAttribute="top" id="Qjj-rM-ogx"/>
                                     <constraint firstItem="Obz-Jw-iu5" firstAttribute="leading" secondItem="mel-n6-P80" secondAttribute="leading" constant="20" id="Rfm-cd-rkf"/>
                                     <constraint firstAttribute="trailing" secondItem="jol-UR-ddb" secondAttribute="trailing" id="SOz-6v-Bc5"/>
-                                    <constraint firstAttribute="trailing" secondItem="vPX-iQ-IEh" secondAttribute="trailing" constant="-10" id="WoK-36-hYh"/>
+                                    <constraint firstAttribute="trailing" secondItem="vPX-iQ-IEh" secondAttribute="trailing" constant="-20" id="WoK-36-hYh"/>
                                     <constraint firstItem="DDd-9r-ZIy" firstAttribute="height" secondItem="Q7j-p6-86q" secondAttribute="height" id="ZCm-5R-FN6"/>
                                     <constraint firstAttribute="trailing" secondItem="jcl-W4-Qri" secondAttribute="trailing" id="ZwO-jO-Qr0"/>
                                     <constraint firstItem="fd8-HR-1p5" firstAttribute="top" secondItem="mel-n6-P80" secondAttribute="top" constant="25" id="aiz-Qz-RFd"/>
@@ -1072,17 +1049,17 @@
                                     <constraint firstAttribute="trailing" secondItem="DDd-9r-ZIy" secondAttribute="trailing" id="hVK-x2-q80"/>
                                     <constraint firstItem="zBS-iZ-fDr" firstAttribute="centerY" secondItem="fd8-HR-1p5" secondAttribute="centerY" id="iw2-FN-47y"/>
                                     <constraint firstAttribute="bottom" secondItem="DDd-9r-ZIy" secondAttribute="bottom" id="jd7-qb-D0e"/>
-                                    <constraint firstItem="Q7j-p6-86q" firstAttribute="top" secondItem="vPX-iQ-IEh" secondAttribute="bottom" constant="15" id="l4q-0A-NH0"/>
                                     <constraint firstItem="EIa-Qg-FFL" firstAttribute="leading" secondItem="mel-n6-P80" secondAttribute="leading" id="leR-J8-M1J"/>
                                     <constraint firstItem="Q7j-p6-86q" firstAttribute="top" secondItem="gvC-Oo-qig" secondAttribute="bottom" id="lmQ-xR-cwf"/>
                                     <constraint firstAttribute="trailing" secondItem="fd8-HR-1p5" secondAttribute="trailing" constant="20" id="m6p-sK-GMJ"/>
                                     <constraint firstItem="DDd-9r-ZIy" firstAttribute="top" secondItem="jol-UR-ddb" secondAttribute="bottom" constant="-5" id="sQi-mV-Uif"/>
+                                    <constraint firstAttribute="bottom" secondItem="vPX-iQ-IEh" secondAttribute="bottom" constant="50" id="w00-pV-IFH"/>
                                     <constraint firstItem="jol-UR-ddb" firstAttribute="leading" secondItem="mel-n6-P80" secondAttribute="leading" id="wxO-p2-uue"/>
                                     <constraint firstAttribute="bottom" secondItem="Q7j-p6-86q" secondAttribute="bottom" id="zSs-wg-bw8"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkR-S1-3SI">
-                                <rect key="frame" x="0.0" y="30" width="393" height="822"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6lq-mz-Rod">
                                         <rect key="frame" x="10" y="10" width="373" height="335"/>
@@ -1097,7 +1074,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-xp-bL3">
-                                                        <rect key="frame" x="5" y="46.666666666666671" width="60" height="1.3333333333333357"/>
+                                                        <rect key="frame" x="5" y="46.666666666666657" width="60" height="1.3333333333333357"/>
                                                         <color key="backgroundColor" name="color7"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="60" id="PrR-CN-2Xu"/>
@@ -1368,7 +1345,7 @@
                                                 <rect key="frame" x="0.0" y="50" width="373" height="235"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y8m-2Y-MAw">
-                                                        <rect key="frame" x="5" y="10" width="363" height="215"/>
+                                                        <rect key="frame" x="5" y="9.9999999999999432" width="363" height="215"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="215" id="KJq-Fu-7p9"/>
@@ -1650,22 +1627,27 @@
                                     <constraint firstItem="6lq-mz-Rod" firstAttribute="top" secondItem="UkR-S1-3SI" secondAttribute="top" constant="10" id="r3V-ap-9lu"/>
                                     <constraint firstItem="Bt9-u8-krh" firstAttribute="top" secondItem="MWP-g1-AQC" secondAttribute="bottom" constant="5" id="rxU-NR-gFm"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="BOK-Pl-QbP"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="UkR-S1-3SI" secondAttribute="bottom" id="14A-y0-VsR"/>
                             <constraint firstAttribute="trailing" secondItem="UkR-S1-3SI" secondAttribute="trailing" id="BB7-M7-Xnd"/>
                             <constraint firstItem="UkR-S1-3SI" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="F0C-eZ-hnI"/>
                             <constraint firstAttribute="trailing" secondItem="mel-n6-P80" secondAttribute="trailing" id="GZT-yi-5cV"/>
                             <constraint firstItem="mel-n6-P80" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="PvM-1y-e82"/>
-                            <constraint firstItem="UkR-S1-3SI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="eW7-iU-gbi"/>
                             <constraint firstItem="mel-n6-P80" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="iqj-f8-wS8"/>
+                            <constraint firstItem="UkR-S1-3SI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="s8w-xa-vdp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UkR-S1-3SI" secondAttribute="bottom" id="xLN-px-Shy"/>
                             <constraint firstAttribute="bottom" secondItem="mel-n6-P80" secondAttribute="bottom" id="ypW-c9-mb8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HaI-io-SYs"/>
+                    <navigationItem key="navigationItem" title="Live" id="HaI-io-SYs"/>
                     <connections>
                         <outlet property="btnAskQuestion" destination="6fM-1I-u6f" id="mB6-yl-s6j"/>
                         <outlet property="btnCloseLiveChatView" destination="Ct6-Jt-UXQ" id="RZ8-AM-zr2"/>
@@ -1703,6 +1685,7 @@
                         <outlet property="viewBottomButton" destination="Q7j-p6-86q" id="xRV-jv-BeM"/>
                         <outlet property="viewCCPreviousLiveStream" destination="HUn-qI-yo7" id="e2a-0P-FXM"/>
                         <outlet property="viewCCUpcomingLiveStream" destination="ZcG-YJ-ujq" id="XZN-QD-J9K"/>
+                        <outlet property="viewFloatingHeart" destination="vPX-iQ-IEh" id="Hof-cP-mpt"/>
                         <outlet property="viewLastComment" destination="7bz-9y-i0L" id="oex-6h-HZq"/>
                         <outlet property="viewLiveChat" destination="EIa-Qg-FFL" id="Pag-nE-6iq"/>
                         <outlet property="viewLiveChatChild" destination="jgn-pu-8k0" id="GNy-hN-lll"/>
@@ -1798,16 +1781,12 @@
         <image name="ask-question" width="62" height="62"/>
         <image name="close" width="25" height="25"/>
         <image name="heart_empty" width="62" height="62"/>
-        <image name="heart_fill" width="62" height="62"/>
-        <image name="heart_fill_outline" width="62" height="62"/>
         <image name="pin_comment" width="62" height="62"/>
         <image name="play" width="16" height="16"/>
         <image name="product_list" width="62" height="62"/>
         <image name="send_message" width="62" height="62"/>
         <image name="share_link_gray" width="25" height="25"/>
         <image name="show_comment_white" width="62" height="62"/>
-        <image name="smiley_heart" width="62" height="62"/>
-        <image name="smiley_sunglass" width="62" height="62"/>
         <image name="unmute" width="25" height="25"/>
         <namedColor name="color7">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

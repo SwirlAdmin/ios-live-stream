@@ -48,7 +48,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="iHL-15-juX"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                                        <state key="normal" image="product_list"/>
+                                                        <state key="normal" image="product-list"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="20"/>
@@ -121,7 +121,7 @@
                                                         <rect key="frame" x="285" y="0.0" width="40" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                                        <state key="normal" image="show_comment_white"/>
+                                                        <state key="normal" image="comment"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="20"/>
@@ -134,7 +134,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKZ-2M-EfC">
                                                         <rect key="frame" x="333" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_empty" translatesAutoresizingMaskIntoConstraints="NO" id="oft-RY-Nhc">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="oft-RY-Nhc">
                                                                 <rect key="frame" x="5" y="5" width="30" height="30"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-S3-dCc" customClass="MIBadgeButton" customModule="GoSwirlLiveStream" customModuleProvider="target">
@@ -142,7 +142,7 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                                                <state key="normal" image="heart_empty"/>
+                                                                <state key="normal" image="heart"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="20"/>
@@ -208,7 +208,7 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                        <state key="normal" backgroundImage="close">
+                                        <state key="normal" backgroundImage="thinclose">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -1779,14 +1779,14 @@
     <resources>
         <image name="arrow_down" width="42.666667938232422" height="42.666667938232422"/>
         <image name="ask-question" width="62" height="62"/>
-        <image name="close" width="25" height="25"/>
-        <image name="heart_empty" width="62" height="62"/>
+        <image name="comment" width="62" height="62"/>
+        <image name="heart" width="62" height="62"/>
         <image name="pin_comment" width="62" height="62"/>
         <image name="play" width="16" height="16"/>
-        <image name="product_list" width="62" height="62"/>
+        <image name="product-list" width="62" height="62"/>
         <image name="send_message" width="62" height="62"/>
         <image name="share_link_gray" width="25" height="25"/>
-        <image name="show_comment_white" width="62" height="62"/>
+        <image name="thinclose" width="25" height="25"/>
         <image name="unmute" width="25" height="25"/>
         <namedColor name="color7">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "GoSwirlLiveStream"
-  spec.version      = "1.5.1"
+  spec.version      = "1.5.2"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the GoSwirlLiveStream framework."
   
@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
   spec.source       = { :git => "https://github.com/SwirlAdmin/ios-live-stream.git", :tag => spec.version.to_s }
   spec.source_files  = "GoSwirlLiveStream/**/*.{swift}"
-  spec.resources = "GoSwirlLiveStream/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,plist}"
+  spec.resource_bundles = {'GoSwirlLiveStream' => ['GoSwirlLiveStream/*/*.{png,jpeg,jpg,storyboard,xcassets,xib,plist}']}
   spec.swift_version = "5.0"
   spec.static_framework = true
   spec.dependency 'FirebaseCore', '10.12.0'

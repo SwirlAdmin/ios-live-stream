@@ -32,7 +32,7 @@ class PreviousStreamCollectionViewCell: UICollectionViewCell {
     
     func configCell() {
         
-        print("From configCell : ", self.objectOfLiveStream as Any)
+        //print("From configCell : ", self.objectOfLiveStream as Any)
         self.updateCellConstraints()
         
         let startDate = self.objectOfLiveStream?.starting_time ?? ""

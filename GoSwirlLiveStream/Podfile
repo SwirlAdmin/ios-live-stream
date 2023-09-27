@@ -6,7 +6,7 @@ target 'GoSwirlLiveStream' do
   use_frameworks!
 
   # Pods for GoSwirlLiveStream
-  pod 'Firebase/Firestore', '10.12'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/InAppMessaging'
   pod 'IQKeyboardManagerSwift','6.5.0'

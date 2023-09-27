@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "GoSwirlLiveStream"
-  spec.version      = "1.5.8"
+  spec.version      = "1.5.9"
   spec.summary      = "This is the best framework."
   spec.description  = "This is the GoSwirlLiveStream framework."
   
